@@ -1,0 +1,1573 @@
+/* Copyright (c) 2018 Tummee. All Rights Reserved. */
+/*DEFAULT*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {font-family:'Roboto'; font-style:normal; font-weight:300;
+			src: url('https://themes.googleusercontent.com/font?kit=d-QWLnp4didxos_6urzFtg') format('woff');}
+@font-face {font-family:'Roboto'; font-style:normal; font-weight:500;
+			src: url('https://themes.googleusercontent.com/font?kit=7KXg6nyyqN8gyMoNwQ7aOQ') format('woff');}
+
+a,body,center,div,em,form,html,img,li,ol,p,span,ul 
+	     {background: None repeat scroll 0 0 transparent; border: 0 none; margin: 0; outline: 0 none; padding: 0; vertical-align: baseline; color:#212121; /*#4e5665*/}
+a        {color: #007ee5; cursor: pointer; text-decoration: none;}
+a:active {color: #007ee5; /* #19b6d3; #0c678c;*/}
+a:hover  {cursor:pointer;}
+a:visited {}
+
+body     {/* #e9eaec; #f5f4ed; #fbfbf8;*/ /*#f6f7f8;*/
+		 font-family: "Open Sans", Roboto, "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif, Helvetica, 'Lucida Sans Unicode', 'Lucida Grande'; line-height: 1.5; font-size: 100%;
+	     letter-spacing: normal; word-spacing: 0; font-weight:400; font-style: normal; font-variant: normal;
+	     text-transform: none; text-decoration: none; text-indent: 0; padding: 0; 
+	     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+	     height:100%; padding:0;
+	     }
+button, input, option, select, textarea 
+	     {font-family: Roboto, Helvetica, 'Lucida Sans Unicode', 'Lucida Grande'; font-size: 100%;} /*this is very important to do; otherwise fonts taken up are different*/
+button   {font-weight:normal; border-radius:3px; padding:.5em 1em; border:1px solid #19b6d3; margin:0; font-size:0.8em; cursor:pointer; background-color:white; /*#19b6d3;*/}
+button:hover {}
+html 	{height:100%; padding:0;}
+h1       {margin:0; font-weight:500; font-size:1.8em; letter-spacing:1px;}
+h2, h3   {margin:0; font-weight:500; font-size:1.5em; color:#212121;}
+h4 		 {margin:0; font-weight:normal; font-size:1.1em;}
+img {page-break-inside:avoid !important;}
+input, select, textarea  
+		 {border:1px solid #dcdcd8; padding:.3em; margin:0; box-sizing:border-box; background-color:white; font-weight:normal; font-size:0.9em; border-radius:5px;}
+textarea {width:100%; font-size:0.9em; padding:8px 10px; border-radius:2px; }
+input[type="checkbox"] {width:2em;}
+input[type="search"] {-webkit-appearance:none; background: url("/res/search-icon.gif") no-repeat 97% 55%; background-color:#fff;}
+input[type="password"], input[type="text"] {padding:8px 10px; width:100%; border-radius:6px; font-size:0.9em;  -webkit-border-radius:6px; -moz-border-radius:6px;}
+input[type="submit"] {-webkit-appearance:button; font-size:1.2em; background-color:#57bc68; color:#fff; border:1px solid #57bc68; font-weight:500; padding:.5em 1em; border-radius:3px; cursor:pointer;}
+input[type="submit"]:hover {background-color:#3b944a;}
+input:focus {border:1px solid #ddd; font-weight:normal;}
+select:focus {border:1px solid #ddd; font-weight:normal;}
+label {}
+ol {list-style:decimal inside; margin:0; padding:0;}
+ul {list-style:none none; margin:0; padding:0;}
+
+#yogaPoseInput {border:1px solid #888;}
+input#yogaPoseInput:focus {border:1px solid #888 !important;}
+
+.auth-navigation {}
+ul.auth-list > li {border:0 !important;}
+
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+.content {margin-top:1em; margin-bottom:5em;}
+
+.main-header-wrapper {background-color:#19b6d3; color:#fff; padding:1em 0; padding-left:20px; padding-right:20px;}
+.container {margin-left:auto; margin-right:auto; max-width:975px;} /*changed*/
+.main-header {}
+.logo-link {color:#fff !important; font-size:1.8em; line-height:1; display:inline-block;}
+.home-heading {text-align:center; font-weight:500; margin: 1em 0;}
+.header-nav {display:inline-block; text-align:right; width:80%;}
+
+.main-container {margin-top:20px;}
+
+.row {margin-left:-20px;}
+.width1, .width2 {float:left; margin-left:20px;}
+.width2 {width:652px;}
+.width2-fluid {width:100%;}
+.width1 {width:300px;}
+
+.form-section {background-color:#fff; -webkit-box-shadow:0px 2px 2px #e2e2e2; -moz-box-shadow:0px 2px 2px #e2e2e2; box-shadow:0px 2px 2px #e2e2e2;
+border:solid 1px #e2e2e2; margin-bottom:30px; padding:2em; padding-top:1.5em;}
+
+.form-row {padding:1em 0 1.5em 0;}
+.form-label {font-size:1.1em; letter-spacing:1px; font-weight:500; line-height:1.2;}
+.cell {display:table-cell; vertical-align:top;}
+.desc-text {color:#777; font-size:0.92em;}
+
+.sidebar-info {color:#6e6e6e;}
+.sidebar-info-title {font-weight:500; color:#6e6e6e;}
+.sidebar-info-text {margin-bottom:20px; color:#6e6e6e;}
+
+#js-select-sequence-tags-u {cursor:pointer;}
+#js-select-sequence-tags-u:hover {cursor:pointer;}
+
+.cursive-action {font-family:cursive; color:#ed174f; font-weight:500; font-size:1em;}
+.cursive-sub-title-text {font-size:1.2em; color:#33373b; letter-spacing:1px; font-family:cursive;}
+.how-it-works-title {font-size:1.8em; color:#8e9ba3; letter-spacing:2px; margin:2em 0 1em 0;}
+
+
+.centerBlock {margin:0 auto; background-color:#fff; padding:0.5em;}
+div.centerBlock {border:1px solid #dcdcd8; }
+
+
+/* Headers */
+.page-section-title {color:#1B2733; font-size:20px; line-height:1.1; font-weight:normal; padding:16px 0;}
+.page-section-subtitle {color:#8da2b5; font-size:1.1em; line-height:1.1; font-weight:300; margin-bottom:1.5em;}
+
+
+/* Fixed Widths (fw) */
+.fw35 {width:35em;}
+.fw30 {width:30em;}
+.fw20 {width:20em;}
+.fwp290 {width:290px;}
+.fwp100 {width:100px;}
+
+/* Background Colors */
+.bg0 {background-color:#fff;} /*site wide background color */
+.bg1 {background-color:#f6f7f8;} /*site wide background color */
+.bg2 {background-color:#f5f4ed;}
+.bg3 {background-color:#7F7F7F !important;} /* dull */
+
+/* Labels */
+th.regular-heading {border:1px solid #dcdcd8; padding:0 1em; font-weight:normal; background-color:#f6f7f8;}
+td.regular {}
+td.label {text-align:right; color:#82888a; font-size:0.9em; padding-right:0.5em;}
+tr.regular > td {border:1px solid #dcdcd8; padding:0 1em; font-weight:normal; width:180px;}
+
+/* Text Fonts and Stylings */
+
+
+/*LAYOUT MODULE: specifies how rows and columns are presented on the website and also spacing amongst them */
+.site-column {border:1px solid #dcdcd8; background-color:white;}
+.site-layout {border-top:1px solid #dcdcd8;} /* "site-layout" class is for 1st level layouts. "nested-layout" class is for 2nd or lower levels. 
+											 /* This is bcoz the padding and margin requirements change with nested levels  */
+.site-layout > div {display:inline-block; margin:0 0.2em; box-sizing:border-box; vertical-align:top;}
+.layout-flex {padding-bottom:2em; margin-bottom:1em;}
+.nested-layout {padding-bottom:2em; border-bottom:1px solid #dcdcd8; margin-bottom:2em;}
+.nested-layout > div {display:inline-block; vertical-align:top;}
+.layout-70.site-column, .layout-15.site-column {border:1px solid #ddd !important; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;
+	box-shadow:0 1px 0 #ddd; -webkit-box-shadow:0 1px 0 #ddd; -moz-box-shadow:0 1px 0 #ddd;   
+} 
+.layout-100-0, .layout-50-50, .layout-33-33-33, .layout-15-70-15, .layout-70-30, .layout-30-70, .layout-40-60, .layout-flex {} /*empty classes used only to clarify the layout for the child divs*/
+.layout-15-70-15 > div {border:0px solid black;}
+.layout-15 {width:13%;}
+.layout-30 {width:30%; padding:1%;}
+.layout-20 {width:20%; padding:1%;}
+.layout-33 {width:27%;}
+.layout-40 {width:38%;}
+.layout-50 {width:48%;}
+.layout-60 {width:58%;}
+.layout-70 {width:64%; padding:1%; }
+.layout-bottom-margin-0 {margin-bottom:0;}
+.layout-border-top-0 {border-top:0;}
+.layout-padding-top-0 {padding-top:0;}
+.layout-padding-0 {padding:0 !important;}
+.layout-border-0 {border:0 !important;}
+.layout-margin-0 {margin:0;}
+.border-right {border-right:1px solid #dcdcd8;}
+
+/*
+@media screen and (min-width: 100px) and (max-width: 979px) {
+	.one-column {width:100%; margin:0 auto; padding:0.5em; }
+}
+	
+@media screen and (min-width: 980px) {
+	.one-column {max-width:1175px; margin:0 auto; padding:0.5em; min-width:980px; }
+}
+*/
+	
+.one-column {/*max-width:1175px;*/ margin:0 auto; width:100%; }
+
+.one-column.background {background-color:#f6f7f8; border:0; border-radius:10px;}
+td.first-column {width:5em;}
+td.long-first-column {width:500px; border-top:1px solid #e2e6e8; padding:10px 80px 10px 10px;}
+td.short-second-column {border-top:1px solid #e2e6e8; padding:20px;}
+
+/* PRIMARY MODULES */
+/*HEADER MODULE*/
+.header {}
+.mainNav {text-align:right;}
+.mainNav > li {display:inline-block;}
+.mainNavLink {color:#e8e9ec;font-size:0.9em; text-decoration:none; margin-left:1em; font-weight:normal;}
+.mainNavLink:hover {font-weight:500;}
+
+/*CONTENT MODULE*/
+.center-text {text-align:center;}
+.home-page-image-container {position:relative;}
+.home-page-title-image {z-index:-1;}
+.home-page-logo {
+	padding-top: 1em;
+	position: absolute;
+	margin-left:1em;
+}
+.home-page-nav {
+	padding-top: 1em;
+	position: absolute;
+	right:0;
+	margin-right:1em;
+	z-index:1;
+}
+
+.home-page-nav > li {display:inline-block; margin-left:1em;}
+.gray-link {color:#fff !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";       /* IE 8 */
+	filter: alpha(opacity=80);  /* IE 5-7 */
+	-moz-opacity: 0.8;          /* Netscape */
+	-khtml-opacity: 0.8;        /* Safari 1.x */
+	opacity: 0.8;               /* Good browsers */
+}
+.white-link {color:#fff !important;}
+
+.home-page-title-container {
+	padding-top: 3.5em;
+	position: absolute;
+ 	left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;	
+}
+.home-page-instructor-title {/*font-size:56px; letter-spacing:4px; line-height:1;color:#666 !important;*/ line-height:1.2;}
+.home-page-instructor-title-details {width:29em; margin:0 auto; font-size:20px; color:#666 !important;
+letter-spacing:1px; /*font-style:italic; font-family: cursive;*/ text-align:left; padding-left:1em;}
+.highlight-benefits {border:1px solid #dcdcd8; width:29em; margin: 0 auto; padding:0 0.5em; text-align:left; font-size:1em; margin-bottom:1em;
+letter-spacing:1px; -webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8; background-color:#fff;}
+.highlight-numbers {font-size:1.3em;}
+
+.home-page-title {font-size:46px; letter-spacing:2px; line-height:1; color:#fff !important;}
+.home-page-title-details {font-size:20px; color:#fff !important; letter-spacing:1px; margin-bottom:2em; margin-top:1em;
+						border:1px solid #fff; padding:1em; border-radius:4px; display:inline-block;}
+
+.home-page-box {float:right; width:55%; vertical-align:top; margin-right:1em;
+				padding:1em; background: rgb(54, 25, 25); /* Fall-back for browsers that don't support rgba */
+    			background: rgba(54, 25, 25, .5);}
+    			
+
+.breadcrumbs {margin-bottom:16px; font-size:14px; color:#8da2b5;}
+.breadcrumbs > a {color:#0070E0 !important; font-weight:500;}
+/*.cover-img {z-index:-1; display:block; margin-top:-1em;}*/
+.cover-title {color:#999 !important; font-size:3em; font-weight:normal; margin-top:0.5em;}
+/*.cover-text {text-align:center; position:absolute; top:2em; left:36%;}*/
+.beta {color:#eee; /*#e8e9ec;*/ letter-spacing:1px; font-size:0.9em; }
+
+/*SIDEBAR MODULE*/
+ul.sidebar-list-of-links {-webkit-padding-start:0 !important; padding-top:1.5em;}
+.sidebar-list-of-links > li {font-size:16px; padding:0.5em; list-style-type:none !important; margin: 0 !important; }
+.sidebar-list-of-links > li:hover {font-weight:500;}
+.sidebar-list-of-links > li > a {color:#495e71; text-decoration:none;}
+.sidebar-list-of-links > li > a:hover {color:#637282;}
+.left-sidebar {border:1px solid #dcdcd8; box-sizing:border-box; padding:0;}
+.sidebar-item-selected {letter-spacing:1px;}
+.sidebar-item-selected > a {color:#0070E0 !important;}
+.sidebar-avatar {width:25px; height:25px; border-radius:25px; -webkit-border-radius:25px; -moz-border-radius:25px; margin-right:10px;
+vertical-align:middle; }
+.testimonial-photo {width:88px; height:88px; border-radius:88px; -webkit-border-radius:88px; -moz-border-radius:88px; vertical-align:middle; }
+.pose-thumbnail {width:35px; height:35px; border-radius:35px; -webkit-border-radius:35px; -moz-border-radius:35px; vertical-align:middle; border:1px solid #ddd;}
+
+.sidebar-avatar2 {width:48px; height:48px; border-radius:48px; -webkit-border-radius:48px; -moz-border-radius:48px; }
+
+.pull-left {float:left;}
+
+.list-item-with-sub-text {border-bottom:1px solid #dcdcd8; padding-bottom:1em;}
+
+/*HEALTH MODULE*/
+/* system data on health */
+.yoga-health-title {line-height:1; padding-bottom:0.5em;}
+.yoga-select-health-target {display:inline-block;}
+.yoga-select-health-target > select {border:1px solid #dcdcd8; font-size:1em; font-weight:500; letter-spacing:1px; color:#555;}
+.yoga-select-health-target > button {background-color:#cd8423; /*#f6f7f8; #c1cd23;*/ border:1px solid #f6f7f8; /*#c1cd23*/; color:white; font-weight:normal;}
+.yoga-select-health-target > button:hover {font-weight:500;}
+/*.yoga-select-health-target > button:hover {background-color: #c1cd23; border:1px solid #c1cd23; color:white; }*/
+
+
+/*YOGA POSE MODULE*/
+/* yoga sections */
+.yoga-pose-basic-data {page-break-inside:avoid !important; background-color:white; border:1px solid #dcdcd8; padding:1%; min-width:150px; margin:1em 1em 1em 0; border-radius:2px;
+-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;
+}
+/*.yoga-pose-basic-data:hover {-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;}*/
+
+/*.yoga-pose-basic-data-image-section {min-height:120px; min-width:190px; position:relative; /*padding-bottom:1em;*/ }*/
+.yoga-pose-basic-data-image-section {}
+/* Mobile */
+/*
+@media screen and (max-width: 450px) {
+	img.yoga-pose-basic-data-image-section {width:60px; height:60px;}
+}
+*/
+
+.yoga-pose-basic-data-text-section {vertical-align:top; max-width:222px;}
+.yoga-pose-text-library {vertical-align:top; text-align:center; max-width:222px;}
+/*
+.yoga-pose-basic-data-text-section {text-align:center; border-top:1px solid #dcdcd8; min-height:4em; vertical-align:top; max-width:500px;}
+.yoga-pose-basic-data-text-section > .yoga-pose-name {min-height:3em;}
+.yoga-pose-basic-data-text-section > p {display:inline-block;}
+.yoga-pose-basic-data-text-section > .wrapper {min-height:6em;}
+.yoga-pose-basic-data > a {color:#222;}
+*/
+
+/* system data on a yoga pose */
+.yoga-pose-benefits-list > li {display:inline-block; width:30%; border-bottom:1px solid #dcdcd8; padding:0.2em; margin:0 0.2em 0.2em 0.2em; }
+.yoga-pose-instr-video {margin:1em 0;}
+.yoga-pose-instr-video-not-found {}
+.yoga-pose-instr-video-license {color:#777; font-size:0.8em;}
+.yoga-pose-js-selection-box {padding:.5em; border:1px solid #dcdcd8; font-size:0.9em;}
+.left-sidebar-box {padding:1em; border:1px solid #dcdcd8; background-color:white;}
+.yoga-pose-large-img {display:block; margin-right:2em; border-bottom:1px solid #ddd; margin-bottom:0.2em;} 
+/*.yoga-pose-large-img {display:block; border-bottom:1px solid #ddd; margin:0 auto;}*/
+.yoga-pose-basic-data-text-section > .yoga-pose-level-pos-type {font-size:0.9em;}
+.yoga-pose-medium-img {position:absolute; left:0; right:0; top:0; bottom:0; margin:auto;} /*to align the image to the bottom*/
+.yoga-pose-name {color:#19b6d3; /*#cd8423;*/ font-size:14px; font-weight:300;}
+.yoga-pose-precautions > ul {list-style:initial; margin-left:2em;}
+/* user inputs on a yoga pose */
+.yoga-pose-select-metadata {margin-bottom:1em;}
+.yoga-poses-metadata-sidebar-box {padding:1em;}
+.yoga-pose-metadata > span {width:12em; text-align:right;}
+.subsection-separator-title {color:#999; margin-top:1em; margin-bottom:-1em;}
+.yoga-pose-sanskrit-name {font-size:14px; font-weight:normal; color:#637282;}
+
+
+/*FOOTER MODULE*/
+
+.footer {margin:0 auto; font-size:12px; text-align:center; padding-top:24px; background-color:#F7F9FA;}
+.footer-navigation > li {padding:0 1em; display:inline-block; border:0px solid black;}
+.footer-navigation > li > a {color: #7F7F7F;}
+
+/*GENERAL MODULES*/
+.logo > a     {text-decoration:none;}
+.logo-title   {font-size:1.3em; line-height:1; color:#fff; /* #cd8423; #e8e9ec;*/ font-weight:500;}
+.signin 	  {color: #e8e9ec;}
+.nav-next-prev {font-weight:500;}
+.nav-label {color:#999; font-weight:500;}
+.vertical-site-column-separator {margin-top:5em;}
+
+/* FORMS */
+.form-user-input-list > li {margin:1em 0;}
+.form-help-text {font-size:0.9em; color:#999;}
+.form-help {color: #222;	font-size: 0.8em; margin-top: 0.2em}
+.text-muted {color:#82888a; font-size:0.9em; font-weight:normal;}
+.text-highlight {font-size:1.3em; color:#fff; font-weight:500;}
+.delete {color:#e84d3d; background-color:#f6f7f8; border:1px solid #ddd;}
+
+/*Helper classes*/
+.hide {display:none !important;} /*.js-user-display-hidden {visibility:hidden;} */
+.show {display:block !important;} /*.js-user-display-hidden {visibility:hidden;} */
+.visible {visibility:hidden !important;}
+.text-left-align {text-align:left;}
+.text-right-align {text-align:right;}
+.emphasize {font-weight:500 !important;}
+.paragraph-sub-heading {font-weight:normal; letter-spacing:1px;}
+.paragraph-heading {font-weight:500; letter-spacing:1px;}
+.butter-bar {margin:1em 0; padding:0.5em; font-size:0.9em; -webkit-border-radius:4px; border-radius: 4px; border: 1px solid #FFDB58; /*color:#1B2733;*/ font-size:14px; background-color:#FFDB58;}
+.sub-butter-bar {color:purple; font-weight:500; padding-bottom:1em;}
+.msg {}
+.text-clarification {color:#999; font-size:0.8em; margin-top:0.5em; display:none;}
+.divider {border-top:1px solid #dcdcd8; margin:2em 0;}
+.color-secondary {color:#999;}
+.yoga-pose-metadata > td:first-child {text-align:right; color:#888; width:7em;}
+.empty-section-body {margin-top:1em; margin-left:1em;}
+.dd-fixed-text {font-size:0.9em; margin-left:1em;}
+.sidebar-title {text-transform:uppercase; color:#999; padding-left:0.8em;}
+.list_page_intro {background-color: white; margin-top:1em; padding:1em; border:1px solid #dcdcd8; font-size:0.9em;}
+.helpIcon {font-size:1.5em;}
+.helpIcon:hover {cursor:pointer;}
+.helpIconText {color:#212121; font-size:0.9em; margin-bottom:1em;}
+.small-text {font-size:14px;}
+
+.standout-text {padding:0.5em 0.2em; -webkit-border-radius:10px; border-radius:10px; margin-top:0.5em; margin-right:0 !important; font-size:1.2em;} 
+
+
+.text-right {text-align:right;}
+.padding-right {padding-right: 1em;}
+
+
+
+
+.dbgBorder {border:1px solid black;}
+	
+/* SECONDARY MODULES */
+/*legal*/
+.legal-inline-disclaimer {font-size:0.8em; color:#999; margin-top:1em; /*background-color:#f6f7f8;*/ padding:0.5em;}
+.legal-footer-disclaimer {color:#999; margin-top:1em;}
+.legal-text-list > li {margin-bottom:2em;}
+.legal-text-list-nested > li {margin-bottom:1em; margin-left:4em;}
+
+/*3rd party buttons: Helpouts by Google & Amazon Yoga Shopping*/
+.third-party-sidebar-box {margin-bottom:0;}
+.third-party-sidebar-box > button {display:block; margin:0 auto;}
+/*.third-party-sidebar-box:hover > .text-clarification {display:block;}*/
+.third-party-button {background-color:#f6f7f8; /*#e9e9db;*/ color:#222; padding:1em; font-weight:normal; border:1px solid #d6d6bb;} /*#f6f7f8; #53a93f /*#c53727*/
+.third-party-button:hover {border:2px solid #9a9a5e;}
+
+.inline {display:inline-block;}
+
+/*DEBUGGING*/
+.myTags {background-color:#57bc68; /*#cfd6d9;*/ font-size:0.8em; padding:0.2em 1em; color:#fff !important; letter-spacing:1px;
+		-webkit-border-radius:15px; border-radius:15px; text-decoration:none !important; font-weight:normal; border:1px solid #aaa;}
+.myTags:hover {font-weight:500;}
+
+#jsYpTagsList {display:inline-block;}
+#jsYpTagsList > li {float:left; margin-right:0.3em;}
+
+#jsTagForm {float:left; margin-top:0.5em;}
+#js-yp-ys-title {font-size:0.9em; margin-right:1em;}
+
+.tagAddButton{-webkit-border-radius:2px; border-radius:7px; background-color:#f6f7f8; color:#222; padding:0.2em 1em; font-weight:normal; border:1px solid #dcdcd8;}
+.tagAddButton:hover{background-color:#cd8423; color:#fff;}
+
+/*#js-add-yp-button-again:hover::after{content:"Click to add this yoga pose to a yoga sequence";}*/
+
+
+.settings {border-top:1px solid #dcdcd8; padding:2em 0;}
+.settings:last-child {border-bottom:1px solid #dcdcd8;}
+.settings > span {font-size:0.9em; font-weight:500;}
+.settings > select {color:#212121; font-weight:500; font-size:1em;}
+.settings > input {color:#212121; font-weight:500; font-size:1em;}
+.settings > button {padding:0.2em 0.5em; -webkit-border-radius:2px; border-radius:2px; }
+
+
+.errTxt {color:#cb2027; font-size:0.9em;}
+
+/*.userInfoBox {background-color:#FFF9E5; padding:0 1em 1em 1em; font-size:0.8em; border:1px solid #57bc68;}*/
+.userInfoBox {background-color:#fff; font-weight:500; color:#212121 !important; padding:0.4em; font-size:0.9em; border:4px solid #57bc68; -webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;}
+.userButton {padding:0.2em 1em; border-radius:3px; font-weight:normal; margin-top:0.5em;}
+.userButton:Hover {font-weight:500;}
+
+.simpleButton {border-radius:3px; font-weight:normal; background-color:#19b6d3; /*#f6f7f8;*/ color:white; /*#222;*/ border:1px solid #dcdcd8; font-size:0.9em;}
+.sign-up-button {font-weight:normal; color:white; /*#222;*/ border:1px solid #dcdcd8; background-color:#17bb5e; border-radius:20px; padding-left:3em; padding-right:3em; font-size:1.2em;}
+.mutedButton {border-radius:3px; background-color:#888;color:#fff;}
+button.gmail {background-color:#477FF7; padding:0.3em 0; width:15em; margin:0 auto;}
+.largeButton {padding:0.5em 1em; font-size:1.2em;}
+
+.dividerText {letter-spacing:1px; margin:2em 0;}
+
+
+#jsUserMsg {font-weight:500; text-align:center; letter-spacing:1px; color:#212121; background-color:#FFF9E5; width:50%; margin:0 auto; border:1px solid #FFDB66;}
+
+
+
+
+.emailLink {border:1px solid #dcdcd8; font-size:0.7em; background-color:#f6f7f8; color:#444; font-weight:500; padding:0.3em 0.3em;
+			-webkit-border-radius:3px; border-radius:3px; }
+
+
+.avatar {width:48px; height:48px; border-radius:5px; vertical-align:bottom; background-color:#f6f7f8;}
+.avatar-img {width:48px; height:48px; border-radius:5px;}
+.yhhm-item {border:1px solid #dcdcd8; background-color:#fff; padding:1em; margin-bottom:1em; font-size:0.9em;}
+.yhhm-item > a {display:inline-block;}
+.yhhm-item > div {display:inline-block; padding-left:0.5em; vertical-align:top; color:#292f33;}
+
+.yhhm-tags-list {margin-top:0.5em;}
+.yhhm-tag {background-color:#d9dee2; font-size:0.9em; padding:0.2em 1em; letter-spacing:1px; -webkit-border-radius:5px; border-radius:5px; }
+.yhhm-tag:hover {background-color:#7f7f7f; color:#fff;}
+
+.main-content-related-bar {background-color:#19b6d3; text-align:right; vertical-align:middle; padding:0.5em; border-radius:5px; font-size:0.9em; float:right;}
+.main-content-related-bar:hover {font-weight:500; text-decoration:none;}
+
+.yhhm-item.secondary {overflow:hidden; font-size:0.8em;}
+
+.ask-a-question {width:90%; padding-bottom:2em; border-bottom:1px solid #dcdcd8;}
+.question {padding-bottom:2em;}
+.question-cell {border-bottom:1px solid #dcdcd8; padding:1em 0 1em 1em; table-layout:fixed;}
+.question-details-cell {vertical-align:top;}
+.questions-list {border-spacing: 0; border-collapse: collapse;  width:100%;}
+tr > td {vertical-align: middle;}
+.answer-button {display:none; border-radius:5px; background-color:#57bc68;}
+.question-title {font-size:1em; letter-spacing:normal; color:#212121 !important; font-weight:500 !important; letter-spacing:1px;}
+
+.answers-count {font-size:1em; color:#cd8423 !important; border-bottom:1px solid #dcdcd8; margin-bottom:1em;}
+.answer {font-size:0.9em; color:#212121;}
+.qa-user {color:#19b6d3;}
+
+/* Questions */
+.questioner {display:inline-block; font-size:0.8em; padding:0.5em;}
+.question-time {text-align:left;}
+.questioner-snapshot {display:inline-block; padding-top:1em; vertical-align:top;}
+.question-cell-title:hover {-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;
+							 border:1px solid #999; cursor:pointer;} 
+							
+.vote-cell {width:1em; border:0px solid red; padding-right:1em; vertical-align:top; padding-top:5px;}
+.vote {display:block; text-align:center; border:0px solid black; line-height:1;}
+.vote-count {font-size:1.2em;}
+.vote-up {cursor: pointer; color:#57bc68;}
+.vote-down {cursor: pointer; color:#888; /*#964F77;*/}
+.vote:hover {text-decoration:none;}
+							
+							
+							
+
+.sign-in-inline-bar {padding:0.5em 1em; background-color:#f0eed5; margin:0 auto; text-align:center;}
+
+.sign-in-header {display:block !important; position:relative;}
+.sign-in-header > h1 {display:inline-block}
+.sign-in-header > h2 {display:inline-block; text-align:right; position:absolute; right:0}
+
+
+.user-account-form {padding:2em;}
+.user-account-form td {padding-bottom:2em;}
+.form-help {color: #222;	font-size: 0.8em; margin-top: 0.2em}
+
+
+.show-pointer {cursor:pointer;}
+
+
+/*
+.headerNav2 > li {display:inline-block; margin-right:1.5em; font-size:0.9em; letter-spacing:1px;}
+.headerNav2 > li > a {color:#222;}
+*/
+
+@media screen and (min-width: 100px) and (max-width: 750px) {
+	.getHelp {margin-bottom:0.5em;}
+	.searchPose {margin-top:0.5em;}
+	
+}
+@media screen and (min-width: 751px) {
+	.getHelp {float:right;}
+	.searchPose {display:inline-block; margin-left:1.5em;}
+}
+
+
+
+
+.ulSel {border-bottom:2px solid #fff;}
+.headerNav {cursor:pointer; position:relative; letter-spacing:1px;}
+.headerNav > li {display:inline-block; font-size:0.8em; letter-spacing:1px; padding:0.1em 1em; vertical-align:top;}
+.headerNav > li:hover > .lists-menu {display:block;}
+.headerNavTitle {font-weight:500;}
+.lists-drop-down {font-size:0.7em; float:right;}
+.headerNavTitleHighlight {color:#222; font-weight:500; font-size:1em; /*border:2px solid #cd8423; padding:4px;*/}
+.headerNavTitle:hover {text-decoration:underline; cursor:pointer;}
+.headerMenu {display:none; position:absolute; background-color: #fbfbf8; padding:1em; border:1px solid #dcdcd8; border-top:0;
+			 font-size:0.9em; font-weight:normal; z-index:1; /*z-index is set so that the menu shows above the images on the page*/}
+.lists-menu {display:none; position:absolute; background-color: #f6f7f8; padding:1em; border:1px solid #dcdcd8; border-top:0;
+			 font-size:0.6em; font-weight:normal; z-index:1; line-height:1.5; /*z-index is set so that the menu shows above the images on the page*/}
+.headerMenuSection {float:left; padding:0.5em; }
+.disable-float {float:none;}
+.headerMenuSection > li > a {text-decoration:none; color:#333;}
+.headerMenuSection > li:hover > a {color:#19b6d3; font-weight:500;}
+
+.dropdown:hover > .dropdown-menu {display:block;}
+.dropdown-title {color:#fff;}
+.dropdown-menu {display:none; position:absolute; background-color: #fff;; padding:1em 0; border:1px solid #dcdcd8; border-top:0;
+			 font-size:0.9em; font-weight:normal; z-index:1; right:0; left:auto; max-width:none;
+			 border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; text-align:center; width:20em;
+			 }
+.menu-item {padding:0.5em 1.5em; letter-spacing:1px; border-top:1px solid #ddd;}
+.menu-item:hover {cursor:pointer; background-color:#f6f7f8;}
+.menu-item-reset:hover {background-color:#fff !important; cursor: default;}
+
+.link-reset {color:#222 !important; text-decoration:none; }
+.button-reset {border:0; }
+
+			 
+
+.lightBrownBgnd {background-color:#fbfbf8;}
+.simpleAnchor {text-decoration:none !important; color:#212121 !important;}
+.panel-header {border-bottom:1px solid #555; font-weight:500; color:#666; letter-spacing:1px; margin-bottom:1em; margin-top:2em;}
+
+.inline-input-text {display:inline-block; width:5em !important; margin-bottom:1em; padding:0.2em !important;}
+.form-question-section {margin-bottom:2em; border-bottom:1px solid #dcdcd8;}
+.form-question {font-size:1.2em; }
+
+.label-sub-menu {width:4em; display:inline-block; font-weight:normal; margin-left:2em;}
+
+.home-page-section {min-height:15em; padding:4em 1em; border-bottom:1px solid #dcdcd8; text-align:center; font-size:1.5em;}
+.home-page-title-v2 {}
+.tall-slim {padding-top:3em; letter-spacing:1px; font-weight:normal; font-size:1.3em; color:#777;}
+.dialog-form, .dialog-form-seq-desc {position:relative; text-align:left; padding:1em; z-index:1; border:1px solid #dcdcd8;
+-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8; max-width:500px; margin:0 auto;
+}
+
+
+#jsMsg {color:#212121; }
+#errMsg, .errMsg, #errMsg2, #errMsg3 {color:#cb2027; font-size:0.9em; font-weight:500;}
+
+#succMsg {background-color: #10bb97; padding: 0.75em 1em; text-align: center; font-size: 0.9em; border: 1px solid #dcdcd8; color:white;}
+
+.highlight {color:#cd8423;}
+.larger {font-size:1.5em;}
+
+
+.highlight-section {background-color:#f6f7f8; padding:1em; border:1px solid #dcdcd8;}
+
+.cookiePolicy {color:#212121 !important;}
+
+#jsNotesMainExisting {}
+.notes_editing {font-size:0.9em; /*border-bottom:1px solid #19b6d3; padding-bottom:1em;*/}
+
+.add-to-yoga-sequence {display:none;}
+.yoga-pose-summary:hover > .add-to-yoga-sequence {display:block;}
+
+#jsPage, #jsYsId, #jsYsIdTheme, #jsYsIdLevel, #jsYsIdPos {display:none;}
+
+/* Colors */
+.white {color:#fff !important;}
+.black {color:#212121 !important;}
+
+/* Basic analytics related CSS classes */
+.yogaSequenceAnalysis {padding:1em; background-color:#f6f7f8; margin-top:0.5em; }
+.chart {letter-spacing:1px; margin-bottom:3em;}
+.chart-insight {}
+.chart > div {margin-bottom:0.2em;}
+.plot-title {display:inline-block; min-width:8em;}
+.plot-graph {font-size:1.2em; padding:0.2em; min-width:2em; font-weight:500; color:#fff; max-width:80%;}
+.inline-children > div {display:inline-block;}
+.chartBeginner, .chartBackBend, .chartSupine {background-color:#b6d319;}
+.chartIntermediate, .chartBalance {background-color:#19b6d3; }
+.chartAdvanced, .chartForwardBend, .chartSitting {background-color:#19d393;}
+.chartStanding, .chartInversion {background-color:#CC7F82;}
+.chartProne, .chartRestorative {background-color:#236B8E;}
+.chartSideBend {background-color:#CC7F82;}
+.chartStrength {background-color:#7F7F7F;}
+.chartStretch {background-color:#f2567f;}
+.chartTwist {background-color:#0093A8;}
+
+.chartBlue {background-color:#19b6d3;}
+.chartDarkerBlue {background-color:#0093A8;}
+.chartRed {background-color:#d71f30;}
+.chartBlue {background-color:#5cbcbd;}
+.chartOrange {background-color:#faaf1a;}
+.chartPurple {background-color:#713e67;}
+.chartGreen {background-color:#b6d319;}
+.chartperc {letter-spacing:2px; margin-top:2em; font-size:18px; color: #bbb;}
+
+.stats-icon {opacity:0.65;}
+.stats-icon:hover {opacity:1;}
+
+
+.dropzone {border:2px solid red;}
+.ui-sortable-placeholder {display:inline-block; width:250px; height:250px;}
+.placeholderClass {display:inline-block !important; width:200px; margin-bottom:1em !important;
+						padding:0; padding-top:2px; margin:0; border:2px solid red; min-height:120px;
+						cursor:-webkit-grab; cursor:-moz-grab; cursor:-webkit-grabbing; cursor:-moz-grabbing;}
+#yogaSequenceList {padding:0.2em; text-align:center;}
+#yogaSequenceList > li {display:inline-block; padding:0; margin:0; cursor:-webkit-grab; cursor:-moz-grab; cursor:-webkit-grabbing; cursor:-moz-grabbing; vertical-align:top; margin-bottom:0; width:225px; /*height:280px; /*height:310px;*/}
+#yogaSequenceList > li:hover {background-color:#ffffd6;}
+#yogaPosesSelectionList {overflow:auto; max-height:100%;}
+.yogaSequenceListShared > li {cursor:default !important;}
+
+.opacity {opacity:0.8;}
+.fixed-position {position: fixed;}
+
+/*
+ * Case by Case Styling 
+ */
+/* Styling Yoga Poses Selection List */
+.YPSLSeq {color:#fff; text-align:center; font-size:0.8em;}
+.YPSLSeq > div {color:#fff;}
+.YSLSeq {}
+.YPSLitem > img {margin:0 auto; text-align:center;}
+.YPSLitem {display:inline-block; vertical-align:bottom; cursor:-webkit-grab; cursor:-moz-grab; cursor:-webkit-grabbing; cursor:-moz-grabbing; /*width:75px; height:95px; border:1px solid #aaa;*/ }
+.YPSLSeqTitle {color:#212121 !important; word-wrap:break-word; font-size:0.9em;}
+.block {display:block !important;}
+.YSLYogaSeqExpandCollapse {margin-left:0.5em; display:inline-block; letter-spacing:1px; font-size:0.9em;}
+.YSLYogaSeqExpandCollapse:hover {cursor:pointer; font-weight:500;}
+.YSLYogaSeqExpandedPose {border:1px solid #19b6d3;}
+.sequence-avatar {border-radius:20px;-webkit-border-radius:20px; -moz-border-radius:20px;}
+
+
+
+/*.yp-number-in-seq {display:inline-block; width:20px; height:20px; border-radius:20px; -webkit-border-radius:20px; -moz-border-radius:20px; border:1px solid #ccc; color:#555;}*/
+/*.yp-number-in-seq {color:#777; position:absolute; left:50%; bottom:-8px; font-size:12px;}*/
+.yp-number-in-seq {color:#777;}
+
+.YSL-form {background-color:#f6f7f8; font-size:0.8em; border-top:1px solid #ddd; height:1.7em;} /*bg0 text-right-align hide*/
+input[name='delYp'] {background-color:#f6f7f8; border:0; color:#e84d3d; float:right;}
+input[name='delYp']:hover {cursor:pointer;}
+
+/*
+ * General Styling 
+ */
+/* Styling list items (li) */
+
+
+/* Styling Titles & Captions */
+.title {line-height:1; margin-bottom:0.5em; margin-top:0.5em; color:#222; font-weight:normal;}
+.page-title {padding-bottom:0.5em; border-bottom:1px solid #dcdcd8; margin-bottom:0.5em;}
+.column-title {padding:0.5em; border-bottom:0px solid #19b6d3; margin-top:0; font-size:0.9em; margin-bottom:1em;}
+.caption-light {font-size:0.8em;}
+.yoga-sequence-caption {font-size:0.9em;}
+/*.yoga-sequence-caption > a {color:#212121;}*/
+.site-bgnd {background-color:#f6f7f8;}
+.panel-title {letter-spacing:1px; font-weight:500; margin-bottom:1.5em;}
+.jsInstr {cursor:pointer;}
+
+
+
+/* Forms */
+.summary-item-form {text-align:right; margin-bottom:0.5em;}
+.summary-item-form > input {text-align:right; border:0;}
+.summary-item-form > input:hover {cursor:pointer;}
+
+
+
+/* 
+ * jQuery UI Libraries 
+ */ 
+
+/* Autocomplete formatting */
+ul.ui-autocomplete {border:1px solid #dcdcd8; -webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8; max-width:225px;}
+li.ui-menu-item {font-size:0.8em; background-color:white; padding:0 0 0.5em 0.4em; list-style-type:none; margin-left:0;}
+li.ui-menu-item:hover {cursor:pointer;}
+
+/* Tooltips */
+.ui-tooltip {
+	padding: 4px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+	font-size:0.8em;
+	background-color: #fff;
+}
+body .ui-tooltip {
+	border-width: 2px;
+}
+
+
+/* Features Specific */
+/* Sequencing Analysis */
+
+.panelBox {border:1px solid #ddd; letter-spacing:1px; font-size:0.8em; padding:1em; margin-top:0.5em;}
+/* .panelButton {border-radius:3px;  margin-right:1em; color:#19b6d3; font-weight:500; background-color:#f6f7f8; color:#f2567f;} */
+.panelButton {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-size:0.75em; border:1px solid #aaa; width:10em;}
+.panelLink {border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  margin-right:1em; color:#212121 !important; font-size:0.75em; border:1px solid #aaa; padding: 0 1em; border:1px solid #dcdcd8; cursor:pointer;}
+.user-med-action-text {color:#ce69c7 !important; font-weight:500; font-size:13px;}
+
+.analyzeButton {border-radius:3px; background-color:#10bb97; color:#fff; margin-right:1em;}
+.highlightPanelButton {font-weight:500;}
+#printLayoutOptions, #requestPoseBox, #addCustomPoseBox, #printSequenceBox, #duplicateSeqBox {display:none; }
+#filterSeqOptions {display:none;}
+input[type="radio"] {width:2em;}
+.yoga-seq-yoga-pose-notes {text-align:left; letter-spacing:normal; margin-top:4px; /* border-top:1px solid #eceff1; */
+font-weight:400; padding:8px;}
+.yoga-sanskrit-title-full {}
+.sanskrit-title {color:#888 !important; font-weight:300; font-size:14px;}
+
+/* Printer Friendly CSS */
+.poweredBy {display:none;}
+
+
+img.circular {border-radius:50%; border:1px solid #dcdcd8; position:absolute; left:0; right:0; top:0; bottom:0; margin:auto;}
+img.regular {border:1px solid #dcdcd8; margin:0 auto; display: block;}
+
+tr.border-bottom > td, th {border:1px solid #dcdcd8; padding:1em;}
+.pricing {padding:1em; text-align:center; background-color:#57bc68; color:#fff; letter-spacing:1px;}
+.pricing > table {margin:1em auto; text-align:left; border:1px solid #dcdcd8; color:#fff; }
+
+.white {color:#fff;}
+
+
+
+/*#yogaPoseSiteInput {width:15em; padding:0.25em; color: #212121; font-size:1em; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;}*/
+#yogaPoseSiteInput, #yogaPoseSiteInput2, #yogaPoseSearchTitleSite, #yogaPoseSearchTitleSite2 {font-size:1em; border-radius:25px; -webkit-border-radius:25px; -moz-border-radius:25px; width:17em; border:1px solid #C1C7CD;padding-left:15px;}
+#yogaPoseSiteInput:focus, #yogaPoseSiteInput2:focus, #yogaPoseSearchTitleSite:focus, #yogaPoseSearchTitleSite2:focus {outline:none;}
+.ui-helper-hidden-accessible { position: absolute; left:-999em; }
+
+
+ul.next-prev-rel-yoga-poses > li {margin-bottom:2em; border-bottom:1px solid #ddd; text-align:center; display:inline-block; margin-right:2em;}
+
+.relevant-yoga-poses-title {margin-bottom:1em; border-bottom:1px solid #57bc68; border-top:1px solid #57bc68; font-size:1.1em; padding-bottom:0.4em; padding-top:0.4em; }
+
+.details-side-col {padding:1em; padding-top:0; text-align:center; letter-spacing:1px;}
+
+.separate-lines {border-bottom:1px solid #dcdcd8; padding:0.2em 0;}
+
+li.learning-cards {display:inline-block; border:1px solid #dcdcd8; padding:1em; margin-bottom:2em; margin-right:1em; vertical-align:bottom;
+	text-align:center; width:280px; height:280px; box-shadow:0 1px 0 #ddd; -webkit-box-shadow:0 1px 0 #ddd; -moz-box-shadow:0 1px 0 #ddd;}
+li.quiz-cards {border:1px solid #dcdcd8; padding:1em; margin-bottom:2em; width:280px; height:280px;
+	box-shadow:0 1px 0 #ddd; -webkit-box-shadow:0 1px 0 #ddd; -moz-box-shadow:0 1px 0 #ddd;
+	margin:0 auto; margin-top:1em;
+	}
+
+.pink {color:#f2567f;}
+
+.oneClicks {cursor:pointer; background-color:#fff; }
+
+.user-attention-box {padding:1em; background-color:#FFF4CC; color:#555; font-size:0.9em; box-shadow:0 1px 0 #ddd; -webkit-box-shadow:0 1px 0 #ddd; -moz-box-shadow:0 1px 0 #ddd;
+border:1px solid #ddd !important; letter-spacing:normal;}
+.user-attention-box:hover {-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;}
+
+.sidebar-attention-box {padding:1em; font-size:0.9em; box-shadow:0 1px 0 #ddd; -webkit-box-shadow:0 1px 0 #ddd; -moz-box-shadow:0 1px 0 #ddd;
+border:1px solid #cd8423 !important; letter-spacing:normal; background-color:#fffdf6;}
+.sidebar-attention-box:hover {-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;}
+
+
+
+.bigTabs > li {display:inline-block; width:30%; border:1px solid #212121; margin:0;}
+
+
+
+#bonusDialog, #thanksDialog, #personalizeDialog, #confirmationDialog, #requestPoseDialog {border:2px solid #10bb97; padding:1em; background-color:#fff; width:500px; display:none;}
+.dialogIsOpen {-webkit-filter: blur(4px) grayscale(50%);-webkit-transform: scale(0.9);}
+
+.ui-dialog .ui-dialog-titlebar-close {position: absolute; right: 0; border:0; background-color:#10bb97;}
+.ui-dialog-titlebar {background-color:#10bb97; padding: 1em;}
+.ui-dialog-title {color:#fff;}
+.ui-button-text {color:#fff;}
+
+
+
+
+.card--empty-dashboard {
+  border: 2px #ddd dashed;
+  border-radius: 10px;
+  width: 190px;
+  height: 190px;
+  text-align: center;
+  color: #ddd;
+}
+
+.yoga-sequence-container-box {/* border:1px solid #ddd; */}
+.container-box {border:1px solid #ddd; padding:1em;}
+
+.pricing-plan-name {padding:0.5em 0; text-align:center; color:#fff; font-size:1.2em; font-weight:normal;}
+div.pricing-plan-column {border:1px solid #dcdcd8; padding: 20px; width:270px; vertical-align:top; margin:0 auto;}
+ul.pricing-plan-column > li {padding:1em 0; border-bottom:1px solid #dcdcd8;}
+
+.removed {text-decoration:line-through; color:#bbb;}
+.footnotes {margin-top:1em; font-size:0.9em; color:#8e9ba3; font-weight:500;}
+/*.pricing-plan {width:200px; border:1px solid #dcdcd8; text-align:center; padding-bottom:2em; margin-top:4em; display:inline-block; vertical-align:top;}*/
+.pricing-plan-title {padding:20px 0; border-bottom:1px solid #dcdcd8; font-size:1.8em; font-weight:500;}
+.pricing-plan-price {padding:20px 0; font-size:2em; font-weight:500;}
+.pricing-plan-price-total {padding-bottom:20px; font-size:1em; font-weight:500; color:#777;}
+.pricing-plan-duration {font-size:0.7em; color:#555; font-weight:normal;}
+.pricing-plan-button {font-weight:normal; color:white; /*#222;*/ border:1px solid #dcdcd8; background-color:#17bb5e; border-radius:20px; padding-left:1em; padding-right:1em; font-size:1.1em;}
+.pricing-plan-footnote {font-size:0.8em; margin-top:1em;} 
+
+#selectYogaSequencePoses {padding:2px; border-right:1px solid #dcdcd8;}
+
+.select-poses-filtering-questions {display:inline-block; font-size:0.9em;}
+.sequence-title {font-size:1.3em; color:#ea4335; font-weight:300;}
+.sequence-title-header {font-size:1.3em; font-weight:500; color:#000;}
+.select-poses-section-titles {letter-spacing:1px; color:#000 !important; font-weight:normal; letter-spacing:1px;}
+.select-poses-filter-box {padding:0.5em; -webkit-box-shadow:0px 2px 2px #e2e2e2; -moz-box-shadow:0px 2px 2px #e2e2e2; box-shadow:0px 2px 2px #e2e2e2;}
+ul.select-filters-for-poses > li {display:inline-block; border:1px solid #dcdcd8; padding:0.25em 0.5em; text-align:center; cursor:pointer; font-size:0.8em;}
+ul.select-filters-for-poses > li:hover {font-weight:500;}
+.select-pose-image-box {position:relative; border:1px solid #dcdcd8; border-radius:10px; margin:5px; max-width:32%; background-color:#fff; overflow:hidden; /*padding-right:0.5em; padding-left:0.5em; margin-top:1em; text-align:center;*/}
+.select-pose-image-box:not(.pose-sections):hover {cursor:pointer; font-weight:500; -webkit-box-shadow:0px 5px 5px #e2e2e2; -moz-box-shadow:0px 5px 5px #e2e2e2; box-shadow:0px 5px 5px #e2e2e2;}
+.select-pose-name {position:absolute; bottom:0; width:100%; font-size:0.7em; text-align:center; white-space: nowrap; overflow: hidden; /*color: #80a0ca;*/ color: hotpink; text-transform: uppercase; padding:0 5px; text-overflow:ellipsis;}
+.show-add-sign {position:absolute; top:3px; right:5px; font-size:1.5em; color:#888; color:#19b6d3;}
+.rselect-pose-name {position:absolute; bottom:3px; width:100%; font-size:0.7em; text-align:center; color:#888;}
+
+.circle-for-numbers {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: #57bc68;
+  font-size: 10px;
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-right:0.5em;
+  vertical-align:middle;
+}
+
+.line-arrow {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  top: -10px;
+}
+
+.progress-bar {margin:0 auto; padding-bottom: 0.5em; }
+.progress-bar-step {display:inline-block; padding-right:3em; font-size:0.8em;}
+.highlight-box-selection {background-color:#ce69c7; color:#fff; border:2px solid black;}
+.highlight-selected-pose {border:2px solid #ce69c7; padding:2px;}
+
+ul#yogaSequenceSelectedPoses:after {clear:both; display:block; content:'';} /*So that ul takes the complete height of li that is a float*/
+ul#yogaSequenceSelectedPoses > li {display:block; font-size:0.8em; padding:0; margin:10px 15px 10px 15px; /*width:165px; height:165px;*/ width:130px; height:135px; position:relative; z-index:0; float:left; overflow:hidden;}
+/*ul#yogaSequenceSelectedPoses > li {position:relative; z-index:0;}*/
+.existingyogaposes {display:inline-block; font-size:0.7em; background-color:#f6f7f8; padding:2px 4px; margin:2px;}
+.yoga-poses-list-for-selection {margin:0.5em 0; padding:0 0 0.5em 0; border:1px solid #dcdcd8; min-height:185px;}
+
+
+.sts /*sequence-title-section */ {}
+.sms /*sequence metadata section */ {font-size:0.8em; letter-spacing:1px;}
+.scm /*sequence-core-metadata */ {width:250px; border:1px solid #ddd; padding:10px; font-size:0.8em; letter-spacing:1px; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px;
+ -webkit-box-shadow:0px 2px 2px #e2e2e2; -moz-box-shadow:0px 2px 2px #e2e2e2; box-shadow:0px 2px 2px #e2e2e2; vertical-align:top;} 
+.sdesc {line-height:1.5; text-align:left;}
+.scmi /*sequence-core-metadata-item */ {margin-right:1em;} 
+.scml /*sequence-core-metadata-label */ {} 
+.scmv /*sequence-core-metadata-value */ {color:#4e5665; font-weight:500;}
+
+.page-section {margin-bottom:4em; margin-top:2em;}
+.form-item {margin-top:1em;}
+
+
+.home-page-testimonial {font-weight:500; border:1px solid #ddd; padding-bottom:0 !important; background-color:#f6f7f8; -webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8;}
+ul.tummee-use-cases > li {margin-bottom:1em;}
+h3.tummee-use-cases {letter-spacing:1px; font-size:1.6em; padding:1em 0; }
+p.tummee-use-cases {display:inline-block; width:250px; height:175px; border:1px solid #dcdcd8; margin:10px; padding:10px; color:#212121; letter-spacing:1px; vertical-align:top; box-shadow:0 5px 10px #dcdcd8;}
+
+ol.sanskrit-pronunciation-list > li {border-top:1px solid #ddd; padding:20px;}
+
+.resources-sections {margin-top:2em;}
+
+.yoga-image-card-options {font-size:0.6em;}
+
+
+.center {text-align:center;}
+.top-bottom-margin {margin:0 0 1em 0;}
+.capitalize {text-transform:uppercase;}
+
+.img-block {width:278px; height:278px;}
+
+.img-scale-80 {width:80%; height:auto;}
+
+.img-scale-800 {-webkit-transform: scale(0.8); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.8); /* FF3.5+ */
+      -ms-transform: scale(0.8); /* IE9 */
+       -o-transform: scale(0.8); /* Opera 10.5+ */
+          transform: scale(0.8);
+             /* IE6�IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+
+.img-scale-60 {-webkit-transform: scale(0.6); /* Saf3.1+, Chrome */
+     -moz-transform: scale(0.6); /* FF3.5+ */
+      -ms-transform: scale(0.6); /* IE9 */
+       -o-transform: scale(0.6); /* Opera 10.5+ */
+          transform: scale(0.6);
+             /* IE6�IE9 */
+             filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+
+.home-link {font-weight:500; font-size:1.2em;}
+
+#filterPosestoSelect:hover {cursor:pointer;}
+#clearInput {font-size:0.8em;}
+
+.share-fb {font-size:0.8em; color:#64809a !important;}
+
+.sequence-summary-box {border-bottom:1px solid #e5e5e5; padding:30px 0 30px 0;}
+.sequence-summary-box:first-child {border-top:1px solid #e5e5e5;}
+.my-sequences-title {margin-right:1em; font-size:18px; }
+a.my-sequences-title:hover {color:#2895F1 !important; font-weight:500;}
+.my-sequences-menu {font-size:14px; color:#637282; padding:0;margin-right:0.5em; border:0;cursor:pointer;}
+.add-to-my-sequences {background-color:#57bc68 !important; padding:4px 12px; border-radius:4px; font-size:12px; color:#fff !important;}
+a.my-sequences-menu:hover, .my-sequences-menu:hover {color:#2895F1 !important;}
+.add-to-my-sequences:hover {background-color:#3b944a !important; color:#fff !important;}
+.benefit-headline {text-align:center; font-size:2.2em; font-weight:normal;}
+.border {border:1px solid #ddd;}
+.key-product-features {vertical-align:top; margin:2%; margin-top:3em;}
+@media screen and (min-width: 100px) and (max-width: 979px) {
+	.key-product-features {width:90%;}
+}
+@media screen and (min-width: 980px) {
+	.key-product-features {width:29%;}
+}
+
+
+
+.key-feature-heading {font-weight:normal; font-size:2em;}
+.key-feature-heading-2 {font-weight:normal; font-size:1.5em;}
+
+.img-wrapper {position:relative; display:inline-block; cursor:pointer; border:1px solid #dcdcd8; border-radius:10px;}
+.drag-info {position:absolute; top:5px; left:5px; font-size:11px; color:#ddd; letter-spacing:1px; text-transform:uppercase; } /* visibility: hidden; opacity: 0; */
+.delete-pose-from-seq, .delete-custom-pose-from-seq {position:absolute; bottom:-5px; right:0; font-size:24px;/*need this bigger for touch screens*/ color:#964F77; /*#cb2027;*/  padding:4px 8px 4px 8px; z-index:1000;} /* visibility: hidden; opacity: 0;  */
+/*.pose-number {position:absolute; top:5px; left:5px; font-size:10px; color:#aaa;}*/
+
+.pose-number {position:absolute; bottom:0px; left:62px; font-size:10px; color:#aaa; z-index:100;}
+
+.delete-pose-from-seq:hover {cursor:pointer;}
+.flip-pose {position:absolute; bottom:0; left:0; font-size:14px; color:#999; letter-spacing:1px; color:#57bc68; padding:4px 8px 4px 4px; z-index:1000;}
+.flip-pose:hover {cursor:pointer;}
+.duplicate-pose {position:absolute; top:0; right:10px; font-size:1.8em; color:#19b6d3; z-index:1000;}
+.duplicate-pose:hover {cursor:pointer;}
+/*.add-cues {position:absolute; bottom:0; font-size:11px;; color:#999; letter-spacing:1px;} /* visibility: hidden; opacity: 0; */
+.add-cues {font-size:0.7em; color:#999; letter-spacing:1px; text-align:center;} /* visibility: hidden; opacity: 0; */
+.add-cues:hover {cursor:pointer;}
+/*
+.img-wrapper:hover {}
+.img-wrapper:hover > .drag-info {visibility: visible; opacity: 1;}
+.img-wrapper:hover > .delete-pose-from-seq {visibility: visible; opacity: 1;}
+*/
+#yogaSequenceArea {padding:0.2em; margin-bottom:1em; position:fixed; background-color:#fff; z-index:100; width:100%; min-height:235px; top:0; overflow:auto; max-height:100%;}
+#yogaSelectPosesArea {margin-top:250px;}
+#add-poses-help-text {font-size:0.5em; color:#cb2027;}
+#add-poses-help-text:hover {cursor:pointer;}
+.add-poses-help-desc {padding:0.5em; font-size:0.9em; margin:0 auto;}
+
+/* #printLayout {font-size:0.9em; cursor:pointer; color:#19b6d3;} */
+/*.ribbon {background-color:#f5f5f5; padding:0.5em; vertical-align:middle; font-weight:500;}*/
+.ribbon {background-color:#fff; border:2px solid #8da2b5; padding:0.5em; vertical-align:middle; font-weight:500;}
+
+#show-small-images {float:right; font-size:0.5em; margin-right:0.5em; cursor:pointer;}
+#show-small-images:hover {font-weight:500;}
+
+li.inline {display:inline-block; border:1px solid #dcdcd8; padding:0.25em 0.5em; margin-top:0.25em; width:7em;}
+li.inline:hover {font-weight:500;}
+
+.highlight-button {background-color: #19b6d3; /*#d14836;*/ color:#fff;font-weight: 500;letter-spacing:1px; border: 1px solid #19b6d3;}
+.nav-lower-priority {font-size:0.8em; color:#64809a !important;}
+
+.down-arrow {}
+.down-arrow:hover {color:#2895f1; border:1px solid #2895f1;}
+.down-arrow-options {position:absolute; left:-160px;text-align:left; padding:1em; z-index:1; border:1px solid #dcdcd8; background-color:#fff; z-index:1; width:200px;
+-webkit-box-shadow:0 5px 10px #dcdcd8; -moz-box-shadow:0 5px 10px #dcdcd8; box-shadow:0 5px 10px #dcdcd8; max-width:500px; margin:0 auto;
+}
+.down-arrow-clicked {}
+li.options-list-item {padding:0.25em;}
+.options-list-item:hover {border:1px solid #dcdcd8;}
+ 
+.intro-heading {letter-spacing:1px; font-size:2em; font-weight:normal;}
+.intro-subheading {text-align:center; letter-spacing:1px; font-size:0.7em; }
+
+.testimonial {margin:0 auto; margin-top:3em; padding:1em; }
+@media screen and (min-width: 100px) and (max-width: 979px) {
+	.testimonial {width:100%;}
+}
+@media screen and (min-width: 980px) {
+	.testimonial {width:50%;}
+}
+
+.testimonial-yoga-instructor {font-weight:500; letter-spacing:1px; color:#bbb; text-align:right;}
+
+.print-choices {border:1px solid #dcdcd8; vertical-align:top; display:inline-block; padding:0.5em; width:15em;}
+
+.promotion {color:#cb2027 !important; font-weight:500; text-decoration:underline; font-size:0.8em;}
+
+#jsTagMsg {color:#cb2027 !important; margin-top:1em;}
+.tips-page {text-align:center; padding-top:9em; background-color:#f6f7f8; margin:0 auto;}
+@media screen and (min-width: 100px) and (max-width: 750px) {
+	.tips-page {width:100%;}
+}
+@media screen and (min-width: 750px) {
+	.tips-page {max-width:980px;}
+}
+			
+@media screen and (min-width: 100px) and (max-width: 979px) {
+	.one-column {max-width:979px;}
+}
+.resize {max-width:95%; height:auto;}
+
+@media screen and (min-width: 100px) and (max-width: 595px) {
+	.resize-1 {max-width:95%; height:auto;}
+}
+
+@media screen and (min-width: 100px) and (max-width: 710px) {
+	.resize-2 {max-width:95%; height:auto;}
+}
+
+.tips-section {margin-top:3em; border:1px solid #ddd; padding:4em; max-width:980px; margin:0 auto; background-color:#fff; margin-top:3em;}
+.tips-section-title {font-size:1.5em;}
+
+.radio-option {padding:0.5em; border:5px solid #ddd;}
+
+.social-comments {margin-bottom:10em; border-top:1px solid #ddd; margin-top:5em;}
+
+.show-more-text {text-decoration:underline; font-size:0.8em;}
+
+.top-nav-secondary {letter-spacing:1px; font-size:0.8em; margin-left:2em;}
+
+.pricing-plan-name {height:60px;}
+.pricing-plan-column > li, .pricing-plan-column-thin > li {height:95px; letter-spacing:1px; font-size:1.2em;}
+div.pricing-plan-column-thin {border:1px solid #dcdcd8; padding: 20px; width:170px; vertical-align:top; margin:0 auto;}
+ul.pricing-plan-column-thin > li {padding:1em 0; border-bottom:1px solid #dcdcd8;}
+
+.yoga-custom-pose-add-poses {width:125px; height:125px; overflow-y:auto;}
+.yoga-custom-pose-view-poses {width:222px; height:241px; overflow-y:auto; vertical-align:bottom; position:relative;}
+.yoga-custom-pose-view-poses-text {text-align:center; font-size:0.9em; bottom:0; overflow-y:auto;}
+
+.sequence-metadata-all-labels {border-top:1px solid #ddd; padding:1em; margin-top:1em; text-align:left; border-bottom:1px solid #ddd; }
+.sequence-metadata-label-header {letter-spacing:1px; border-bottom:1px solid #ddd; display:inline-block; width:6em; text-align:right; margin-right:6px; font-size:0.9em;}
+.sequence-metadata-label-data {color:#222;}
+
+ul.sequence-metadata-list-items {text-align:center; display:block; margin-top:1em; list-style:square outside url("/res/circle_pink_50.png");  border-top:1px solid rgb(236, 239, 241); border-bottom:1px solid rgb(236, 239, 241); }
+ul.sequence-metadata-list-items > li {display: inline-block; width:auto; margin-left:17px;}
+ul.sequence-metadata-list-items > li:before {content:""; display: list-item; width: 0px; height: 2px;}
+
+.selectedViewButton {background-color:#d0edd5; font-weight:500; border:1px solid #acdeb4 !important;}
+
+/*Autocomplete formatting */
+.ui-autocomplete {max-width: 350px !important; max-height: 350px !important; overflow:auto;}
+.ui-state-focus:hover {background-color:#f6f7f8;}
+.ui-autocomplete-builder {max-width: 100% !important; max-height: auto !important; overflow:auto;}
+
+/* FORMS */
+/* Radio Buttons */
+.radio-select-option {padding:0.5em; display:block; cursor:pointer; margin-bottom:0.1em;}
+.radio-select-option:hover {font-weight:500;}
+.radio-select-option:hover > .text-muted {visibility: visible; display:block;}
+ 
+.new-sequence-button {display:inline-block; color:#212121; border:1px solid #bbb; border-radius:2px; font-size:0.9em; padding:0.25em 1em;}
+#defaultPoseSectionsLayout:hover {cursor:pointer;}
+#viewHelp, #viewHelpMobile {font-size:0.9em; text-align:center; /*color:mediumvioletred;*/ color: #80a0ca;}
+
+
+/* PUBLIC PAGES */
+.site-width {max-width:980px; margin:0 auto; width:100%;}
+.site-col-1 {background-color:#fff; display:inline-block;}
+@media screen and (min-width: 980px) {
+	.site-col-1 {width:70%;}
+	.site-col-2 {width:25%;}
+}
+@media screen and (max-width: 979px) {
+	.site-col-1 {width:100%;}
+	.site-col-2 {width:100%;}
+}
+
+.site-col-1 {background-color:#fff; border:1px solid #ddd; margin-bottom:1.5em; }
+.site-col-2 {display:inline-block; vertical-align:top; border:0; padding:0 0 0 0.5em;}
+.pose-metadata {font-size:0.8em; letter-spacing:1px; position:absolute; top:3px;}
+
+ul.side-links {margin-top:1em;}
+ul.side-links > li {margin-bottom:1em;}
+
+.yoga-sequence-builder {border:1px solid #57bc68; padding:1em; margin-bottom:1em; background-color:#19b6d3 /*#0c678c*/; color:#fff; }
+
+.new-sign-up-website-guide {border:1px solid #000; background-color:#108abb; color:#fff; padding:1em;}
+
+/* Side Menu Layout */
+/*
+.site-left-nav {max-width:18%; float:left; margin-right:10px; margin-top:0.5em; padding-top:0.5em; margin-bottom:5em;}
+.site-left-nav-layout {float:left; max-width:78%;}
+*/
+
+.site-left-nav-layout {float:left; width:85%; border:1px solid #dcdcd8; border-radius:5px;}
+.site-left-nav {float:left; width:15%; background-color:#F7F9FA; padding-bottom:600px;}
+.tummee-logo {display:inline-block; font-weight:500; width:15%; padding:0 1em; font-weight:100; margin-left:inherit; margin-bottom:0 !important;}
+.main-col {padding:0 16px; font-size:16px; }
+.nav-col {padding:0 1em;}
+
+@media screen and (max-width: 1500px) {
+	.site-left-nav-layout {float:left; width:80%;}
+	.site-left-nav {float:left; width:20%;}
+	.tummee-logo {width:20%;}
+}
+
+
+
+
+.site-left-nav-section-title {padding-top:3em !important; text-transform:uppercase; color:#8da2b5; letter-spacing:1px; font-size:1em;}
+.site-left-nav-section-title:hover {background-color:#fff !important;}
+
+/*
+.yoga-pose-page-title {font-size:2em; margin-bottom:0.67em 0;  color:#444;}
+.yoga-pose-page-subtitle  {font:300 24px/32px Roboto,sans-serif; letter-spacing:-.01em; margin:40px 0 20px; padding-bottom:3px;}
+.yoga-pose-page-h3, .yoga-pose-page-subsections h3 {font-size:1.2em; margin:1em 0 0.25em 0; font-weight:400; }
+.yoga-pose-page-p, .yoga-pose-page-subsections p {margin:16px 0; padding:0;}
+.yoga-pose-page-ul, .yoga-pose-page-subsections ul {list-style-type: square; list-style-position: inside; padding-left: 1em;}
+.yoga-pose-page-ol, .yoga-pose-page-subsections ol {list-style-position: inside; padding-left: 1em;}
+.yoga-pose-page-subsections {margin-bottom:2em;}
+.yoga-pose-page-top-bar {margin-bottom:2em;}
+.topbar-list-of-links > li {float:left; border:1px solid #ddd;}
+.yoga-pose-page-lhs {max-width:750px; margin:0 auto; border:0; padding:1em; background-color:#fff; -webkit-box-shadow:0 10px 10px #bcbcb4; -moz-box-shadow:0 10px 10px #bcbcb4; box-shadow:0 10px 10px #bcbcb4;}
+.yoga-pose-page-lhs-phase-2 {float:left; max-width:72%; border:0; padding:0.5em; background-color:#fff; -webkit-box-shadow:0 10px 10px #bcbcb4; -moz-box-shadow:0 10px 10px #bcbcb4; box-shadow:0 10px 10px #bcbcb4;}
+.yoga-pose-page-card {border:1px solid #ddd; padding:0.25em;}
+*/
+
+@media screen and (max-width: 749px) {
+	.yoga-pose-page-video-section {display:none;}
+}
+
+@media screen and (min-width: 451px) {
+	.yoga-pose-page-card {float:right; margin:0.5em 0 0.5em 0.5em;}
+}
+
+@media screen and (max-width: 450px) {
+	.yoga-pose-page-card {display:block !important; margin: 0 auto; margin-bottom:0.5em;}
+}
+
+.yoga-pose-page-ysb {padding:1em; margin-bottom:1em; background-color:#fff; border:1px solid #ddd; -webkit-box-shadow:0 10px 10px #bcbcb4; -moz-box-shadow:0 10px 10px #bcbcb4; box-shadow:0 10px 10px #bcbcb4; text-align:center;}
+
+/* testing */
+.testing {color:red;}
+.yoga-sequence-poses {width:100%; padding-left:20px;}
+.round-edges {border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; font-weight:500;}
+.print-layout-selections {display:inline-block; font-size:13px; margin-top:8px;}
+
+.create-sequence-button-item {margin-bottom:0.5em;text-align:center; color:#fff; background-color:#2895F1; /*background-color:mediumorchid; */ }
+.create-sequence-button-plus {text-align:center; color:#fff; background-color:#2895F1; border-radius:50%; float:right; width:45px; height:45px; font-size:29px; margin-top:12px; }
+.create-sequence-button-item:hover, .create-sequence-button-plus:hover {background-color:#0070E0; /*background-color:orchid;*/}
+.sequence-poses-and-cues {text-align:center;}
+.create-sequence-button {color:#fff !important;}
+
+
+/* Sequences Summary Page */
+.sequence-summary-bar {}
+
+/* Design V0310 */
+.user-header {padding:0.2em 0.5em 0 0.5em; background-color:#F7F9FA;}
+.title-color {color:#222 !important;}
+
+/* Mobile */
+.show-on-mobile {display:none;}
+.site-mobile-nav {}
+.mobile-sidebar-list-of-links {text-align:center; background-color:#F7F9FA;}
+ul.mobile-sidebar-list-of-links > li {display:inline-block; width:50px; text-align:center; padding:0 !important; margin:0 !important; border-bottom:1px solid #eee !important;}
+ul.mobile-sidebar-list-of-links > li > a {color:#495e71; font-size:12px;}
+
+.mobile-sidebar-item-selected {font-weight:500; color:#fff;}
+.mobile-sidebar-item-selected > a {color:#0070E0 !important; font-weight:normal;}
+.mobile-footer {padding:8px 0; text-align:center; background-color:#F7F9FA;}
+.mobile-footer > li {display:inline-block; width:7em; vertical-align:top; padding:4px 0;}
+.mobile-footer > li > a {color:#495e71;}
+
+/* Desktop / Laptop */
+@media screen and (min-width: 451px) {
+	.site-mobile-nav {display:none !important;}
+	.responsive-70-100 {max-width:70%;}
+	.responsive-60-100 {max-width:60%;}
+	.responsive-40-100 {max-width:40%;}
+	.select-filters-for-poses {max-width:25%;}
+}
+
+/* Mobile */
+@media screen and (max-width: 450px) {
+	.show-on-mobile {display:block !important;}
+	.hide-on-mobile {display:none !important;}
+	.add-poses-on-mdevice {display:none;}
+	.site-left-nav-layout {width:100%; border:0 !important; }
+	.main-col {padding:0 0.5em;}
+	.yoga-sequence-poses > img {width:100px; height:100px;}
+	.responsive-70-100 {max-width:100%;}
+	.responsive-60-100 {max-width:100%;}
+	.responsive-40-100 {max-width:100%;}
+	.one-column {padding-top:0 !important;}
+	
+	/* reformat add poses webpage */
+	li.YPSLitem > img, ul#yogaSequenceSelectedPoses > li > img {width:105px; height:105px; max-width:100%;}
+	ul#yogaSequenceSelectedPoses > li {/* width:80px; height:80px; */ width:115px; height:115px; max-width:29%; margin:5px;}
+	li.YPSLitem > .show-add-sign {font-size:0.8em;}
+	li.YPSLitem > .select-pose-name {/* display:none; */ color: hotpink; /*#80a0ca;*/ text-transform: uppercase; }
+	ul#yogaSequenceSelectedPoses > li > .pose-number{display:none;}
+	.select-filters-for-poses {max-width:17%;}
+	
+	.yoga-poses-list-for-selection {margin:0; padding:0; border:0; text-align:center;}
+}
+
+.default-sequence-tabs {
+	margin-top:1em;
+	font-size:12px; width:15.5%; text-align:center;
+	border:1px solid #0070E0; border-radius:0;
+	color: #0070E0; display:inline-block;
+	border-left:0; padding:0.5em; text-transform:uppercase;
+}
+
+
+#mobileBuilderTabsSection {
+	margin-bottom:3px;
+}
+
+button.mobile-builder-tabs {
+	font-size:12px; width:100%;
+	border:1px solid #0070E0; border-radius:0;
+	color: #0070E0;
+}
+
+.mobile-sequence-tabs {
+	font-size:12px; width:22%;
+	border:1px solid #0070E0; border-radius:0;
+	color: #0070E0; display:inline-block;
+	border-left:0; padding:0.5em; text-transform:uppercase;
+}
+
+.mobile-home-tabs {
+	font-size:12px; width:33% !important;
+	border:1px solid #0070E0; border-radius:0;
+	color: #0070E0; display:inline-block;
+	border-left:0; padding:0.5em; text-transform:uppercase;
+}
+
+.mobile-home-sel-tab {
+	background-color:#0070E0; color:#fff !important; font-weight:500;
+}
+
+.mobile-sequence-sel-tab {
+	background-color:#0070E0; color:#fff; font-weight:500;
+}
+
+
+.mobile-sequence-back-link {
+	text-align:left; font-size:12px;
+}
+
+.tab-left-radius {
+	border-top-left-radius:4px !important; -webkit-border-top-left-radius:4px !important; -moz-border-top-left-radius:4px !important;
+	border-bottom-left-radius:4px !important; -webkit-border-bottom-left-radius:4px !important; -moz-border-bottom-left-radius:4px !important;
+}
+
+.tab-right-radius {
+	border-top-right-radius:4px !important; -webkit-border-top-right-radius:4px !important; -moz-border-top-right-radius:4px !important;
+	border-bottom-right-radius:4px !important; -webkit-border-bottom-right-radius:4px !important; -moz-border-bottom-right-radius:4px !important;
+}
+
+/*
+#print-option-cues {
+	max-width: 17%;
+}
+*/
+
+button.mobile-builder-sel-tab {
+	background-color:#0070E0; color:#fff; font-weight:500;
+}
+
+.pose-selected {
+	background-color:#d9dee2;
+}
+
+.builder-buttons-save, .builder-buttons-cancel {border:0; color:#6fc67e; font-size:14px; font-weight:500; padding-left:0; padding-right:0; margin-left:16px;}
+.builder-buttons-save:hover, .builder-buttons-cancel:hover {text-decoration:underline;}
+.builder-buttons-cancel {margin-top:5px; font-weight:100;}
+
+
+
+.site-mobile-nav-burger {max-width:80%; position:absolute; background-color:#F7F9FA; padding-right:16px;
+ webkit-box-shadow:0px 12px 12px #e2e2e2; -moz-box-shadow:0px 12px 12px #e2e2e2; box-shadow:0px 12px 12px #e2e2e2;
+ z-index:100;
+}
+
+/* Tabs */
+.sequence-nav {letter-spacing:1px; font-size:0.9em; margin-bottom:1em;}
+.tutorial-nav {letter-spacing:1px; font-size:0.9em; margin-bottom:1em;}
+.tab-bar {}
+.tab-bar-item {display:inline-block; border:1px solid #8da2b5; padding: 0.25em 0.5em; width:7em; text-align:center; margin:0; font-size:0.9em; background-color:#fff; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; margin-bottom:0.2em;}
+.tab-bar-item > a {color:#666 !important;}
+.tab-selected {background-color:#576f85; font-weight:500; color:#fff; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px;} 
+
+.tab-bar-item.tutorials {max-width:20em !important; width:auto;}
+/* */
+.sequence-system-data {text-align:right; font-size:0.8em; color:#777; font-style:italics; margin-right:0.5em;}
+
+/* User Notifications */
+.info-msg {border:1px solid #dcdcd8; padding:0.5em; background-color:#f6f7f8; font-size:0.8em; letter-spacing:1px; border-radius:6px; -webkit-border-radius:6px; -moz-border-radius:6px; margin-bottom:2em; color:#666;}
+
+/* YA */
+.activity-tabs-list {margin:1.5em 0;}
+.activity-list-item {display:block; border-top:1px solid #e5e5e5; padding-top:15px;}
+.activity-image {float:left;}
+.activity-text {width:100%;}
+.activity-numbering {font-size:14px; color:#777;}
+
+img.activity {}
+.activity-pose-title {font-size:16px; font-weight:400;}
+
+.activity-tab {border:1px solid #0070E0; padding:4px 12px; border-radius:4px; font-size:14px; color:#495e71; margin-right:4px;}
+.activity-tab-selected {background-color:#0070E0; color:#fff; border:1px solid #0070E0;}
+
+
+
+
+/* Printing */
+.print-layout-panel {margin:0.5em; font-size:0.9em; background-color:#f6f7f8; padding:0.5em; border:1px solid #dcdcd8;}
+a.sequence-layout-option-buttons {padding:0.5em 1em; background-color:#f6f7f8; font-size:0.8em; color:#000 !important;}
+
+/*
+@media screen and (max-width:8.5in) { 
+    html { width:8.5in; }
+    body { font: 9pt/1.5 Arial, sans-serif; }
+ ...
+}
+*/
+
+/* Content */
+.a-img-hl:hover {display:inline-block; border-bottom:1px solid #108abb;}
+
+.teacher-sequence-list-item:first-child {border-top:1px solid #e5e5e5;}
+.teacher-sequence-list-item {padding:16px 16px 16px 8px; border-bottom:1px solid #e5e5e5;}
+.numbering {width:1.5em; text-align:right; color:#637282; margin-right:1em; display:inline-block;}
+.numbering-main {width:20px; text-align:right; color:#637282; display:inline-block; margin:0; padding:0;}
+.section-subtitle-low{color: #637282; line-height: 39px; padding: 0; font-weight: normal; font-size:12px;}
+.section-subtitle-med {color: #637282; line-height: 39px; padding: 0; font-weight: normal; font-size:14px;}
+.page-title-desc {color:#3d464d; font-size:15px; font-weight:100; margin-bottom:15px;}
+.tip-card {padding: 16px; background-color: #F7F9FA; border-radius: 4px; border: 1px solid #E6E8EB; color:#1B2733; font-size:14px; margin-bottom:1em;}
+.tour-card {display:inline-block; padding: 16px; background-color: #fff; border-radius: 4px; border: 1px solid #bedeff; color:#1B2733; font-size:14px; margin-bottom:1em;}
+.tour-card-link {color:#495e71;}
+a.tour-card-link:hover {color:#0070E0 !important;}
+.faqs-question {color:#47525d;}
+.faqs-answer {font-size:14px; color:#7b8994; line-height:20px;}
+ul.tabs-bar {font-size:15px; line-height:39px; font-weight:100; padding-top:8px; margin-bottom:16px;}
+ul.tabs-bar > li {display:inline-block; margin-right:24px; text-indent:inherit; padding-left:inherit; margin-left:inherit; margin-bottom:0 !important; text-transform:uppercase; font-weight:500; }
+
+ul.tabs-bar-mobile {font-size:12px; border-bottom:1px solid rgba(61,70,77,0.1); font-weight:100; margin-top:4px;}
+ul.tabs-bar-mobile > li {width:60px; text-align:center;}
+
+li.tab {display:inline-block;}
+li.tab > a {color:#71767a;}
+li.tab-selected2 {color:#1B2733; font-weight:500; border-bottom:2px solid #2895f1;}
+li.tab-selected2 > a {color:#2895f1 !important; }
+
+.auth-button-google {background-color:#0070E0; color:#fff; font-size:16px; width:270px; padding:6px 0;}
+.auth-button-google:hover {background-color:#168add;}
+.auth-button, .questionnaire-button {background-color:#57bc68; color:#fff; font-size:16px; border:1px solid #57bc68; width:270px; }
+.auth-button:hover, .questionnaire-button:hover {background-color:#7bcb89;}
+ 
+
+.single-col {max-width:750px; margin:0 auto; background-color:#fff; padding:24px; border:1px solid #ddd;}
+ 
+.header-sequence {padding:25px 0; max-width:1150px; margin:0 auto; border-bottom:1px solid #E5E5E5;}
+.page-section-title-sequence {font-size:28px; color:#5e676d; text-align:center; line-height:36px; font-weight:300; padding-bottom:0;}
+
+.sequence-metadata {font-size:16px; color:#5e676d; text-align:center; margin-top:2em; /*padding:16px 0; */}
+@media screen and (max-width: 450px) {
+	.sequence-metadata {margin-top:0;}
+}
+
+.sequence-metadata-author {font-size:13px; color:#5e676d;}
+
+.pose-tag {border:1px solid #bedeff; padding:4px 12px; border-radius:4px; font-size:14px; color:#000; margin-right:4px;}
+a.pose-tag:hover {color:#0070E0 !important;}
+
+
+
+.u-sequence-tags-list {display:inline-block;}
+.u-sequence-tags-list > li {border:1px solid #ddd; padding:4px 8px; border-radius:16px; font-size:12px; color:#777; margin-right:4px; display:inline-block;}
+.u-sequence-tags-list > li:hover {cursor:pointer; font-weight:500; color:#2895f1;}
+.u-seq-tag-highlight {background-color:#2895f1 !important; color:#fff !important;}
+.u-seq-tag-highlight:hover {color:#ccc !important; font-weight:500 !important;}
+
+.pose-tags-box {display:inline-block; border:1px solid #eceff1; border-radius:4px; vertical-align:bottom;}
+.selected-pose-tag {background-color:#0070E0; color:#fff; border:1px solid #0070E0;}
+a.selected-pose-tag:hover {color:#fff !important;}
+
+.form-instructions {background-color:#dcdcd8; padding:0 16px 16px 16px; border-radius:4px; margin-bottom:24px;}
+
+.yoga-sequence-section-title {margin-top:16px; letter-spacing:1px; font-size:20px; color:#000; font-weight:400;}
+.yoga-sequence-title {color:#0070E0; font-size:16px; font-weight:400; margin-top:16px;}
+
+ul.yoga-sequences-list > li {display:inline-block; width:370px; height:375px; text-align:center; border:1px solid #bedeff; vertical-align:top; border-radius:10px; margin:16px 16px 16px 0; padding:24px;}
+.yoga-sequence-image-container {vertical-align:middle; padding:8px; margin:0 auto;}
+ul.yoga-sequences-list > li:hover {font-weight:500; webkit-box-shadow:0px 8px 8px #e2e2e2; -moz-box-shadow:0px 8px 8px #e2e2e2; box-shadow:0px 8px 8px #e2e2e2;}
+@media screen and (min-width: 100px) and (max-width: 595px) {
+	ul.yoga-sequences-list > li {display:block; max-width:100%;}
+	.yoga-sequence-image-container > img {max-width:100% !important; height:auto !important;}
+}
+ul.yoga-sequences-list {margin-top:8px;}
+
+.sequence-tag {padding:4px 12px; border-radius:4px; font-size:14px; color:#6e89a1; margin-right:4px;}
+a.sequence-tag:hover {color:#0070E0 !important;}
+li.selected-sequence-tag {background-color:#0070E0; color:#fff; border:1px solid #0070E0;}
+li.selected-sequence-tag > a {color:#fff !important;}
+ul.sequence-tags-list {border-bottom:1px solid #e5e5e5; padding:32px 0;	}
+ul.sequence-tags-list > li {display:inline-block; margin-bottom:8px; width:6em; border:1px solid #bedeff; text-align:center; border-radius:4px; }
+
+.sequence-text {color:#495e71 !important;}
+
+.yoga-sequences > section {border-top:1px solid #e5e5e5; padding:8px 0 48px 0;}
+.highlight-box  {padding:4px 12px; border-radius:4px; font-size:14px; margin-right:4px; background-color:#0070E0; color:#fff; border:1px solid #0070E0;}
+ol.helpfaqs > li {margin-bottom:32px; font-size:16px; color:#000;}
+img.helpfaqs {border:1px solid #dcdcd8; margin:12px; opacity:0.8; max-width:100%;}
+.faqQuestion {font-size:24px; font-weight:100; margin-bottom:16px; color:deeppink;}
+.faqs-list-item:first-child {border-top:1px solid #e5e5e5;}
+.faqs-list-item {padding:32px 32px 16px 8px; border-bottom:1px solid #e5e5e5;}
+
+#js-faqs {cursor:pointer;}
+
+li.default {list-style-type: disc; list-style-position: outside;  margin-left: 1.5em;  margin-bottom: 8px;}
+.product-tour-page {color:#4c555a; line-height:27px;}
+.product-tour-page-title {text-align:center; font-size:30px; font-weight:400; margin:16px 0; color:#32325d;}
+.product-tour-page-sub-title {font-size:22px; font-weight:400; margin:0; color:#222;}
+p.product-tour-page-sub-title-highlights {margin:0; color:#8da2b5; font-size:14px;}
+.product-tour-page-section {padding:32px 0; border-bottom:1px solid #8da2b5;}
+p.product-tour-page-second {margin-top:8px;}
+.product-tour-page-conclusion {padding:32px 0;}
+
+.inline-help {background-color:#F7F9FA; /*#FFFDE7;*/ color:#000; padding:12px; border:1px solid #ddd; margin:16px 0; border-radius:5px; font-size:14px; letter-spacing:initial; text-align:left; position:relative;}
+
+.guide-button {font-size:12px; margin-top:1em; font-weight:100; background-color:mediumaquamarine; border:1px solid #dcdcd8; border-radius:3px; cursor:pointer; color:#fff;}
+.guide-button:hover {background-color:mediumaquamarine;}
+
+.layout-settings-elm {float:right; }
+.info-text {height:20px; width:20px; border-radius:10px; background-color:#aaa; font-size:10px; line-height:20px;}
+.info-text:hover {cursor:pointer;}
+.empty-circle {
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  background-color:#aaa; /* #aaa;*/
+  font-size: 10px;
+  line-height: 20px;
+  text-align: center;
+  display: inline-block;
+  vertical-align:middle;
+  margin-bottom:2px;
+}
+
+.Exhale, .Ausatmen, .Esalare, .Exhale-Hold, .Hold   {color:red;}
+.Inhale, .Einatmen, .Inalare, .Inhale-Hold {color:limegreen;}
+.Inhale-Exhale, .Ein-Ausatmen, .In-Esalare, .Breathe-Natural {color:#cd8423;}
+
+.custom-title {font-weight:300; color:#000;}
+.english-title {letter-spacing:normal; font-weight:400; color:mediumpurple !important; font-size:15px;}
+.english-title:hover {font-weight:500; color:#007ee5 !important;}
+
+.steps-section {margin-top:2em;}
+.steps-hl {font-weight:500;}
+.merge-sequences {margin-top:1em;}
+#mergeSequences {background-color:#57bc68 !important; border:1px solid #57bc68 !important; color:#fff !important; font-size:14px;}
+.error-msg {background-color:#FFDB58; padding:0.5em 1em; margin:0.5em 0; border-radius:8px;}
+.cues-label {width:auto !important; margin-left:1em; text-transform:uppercase; color:#444; margin-top:2px;}
+.cues-list-item {border-bottom:25px solid #F7F9FA;}
+.newFn {background-color:aliceblue; border-radius:8px; padding:16px; font-size:0.9em;}
+.sharing-links {text-align:right; font-size:16px;}
+#save-layout-settings {color:#57bc68 !important; border:0;}
+#print-option-layout, #print-option-cues, #print-option-pics, #print-option-titles, #print-option-overlap, #js-image-size, #js-text-size, #print-option-border, #print-option-headers, #print-option-detailed-cues {color:#888; text-transform:uppercase; border:0;}
+#print-option-layout:hover, #print-option-cues:hover, #print-option-pics:hover, #print-option-titles:hover, #js-image-size:hover, #js-text-size:hover, #print-option-border:hover, #print-option-headers:hover {cursor:pointer;}
+ .all-poses-filters {color:#888; text-transform:uppercase; border:0; width:9em;}
+ 
+.profile-mtd {}
+.profile-pic {float:left; vertical-align:top; max-width:256px; max-height:256px; margin-right:16px;}
+.bio {text-align:left; line-height:1.4; font-size:15px;}
+@media screen and (min-width: 100px) and (max-width: 750px) {
+	.profile-pic {display:block; text-align:center; max-width:256px; max-height:256px;}
+}
+.layout-options-interactive-info {background-color:#f6f7f8; padding:8px; text-align:left; margin:8px; font-size:14px; color:#888; position: relative; padding:8px;}
+.user-interactive-text {color:#888;}
+.close {position:absolute; top:0; right:5px; color:#888;}
+.close:hover {cursor:pointer;}
+.plan-expired {text-align:center; padding:1em; margin:2em; border:1px solid #dcdcd8; border-radius:8px; color:#777;}
+.link-to-next-action {text-align:center; padding:5em 1em; margin:2em; border:1px solid #dcdcd8; border-radius:8px; color:#777;}
+.form-label-heading {font-weight:500; color:lightsteelblue; letter-spacing:1px;}
+.submitButtonTop {text-align:right; font-size:12px; margin:0 !important;}
+.submitButtonTop > input[type="submit"] { font-size:12px !important;}
+.merge-sequence-dd {max-width:100%;}
+.overlay, .overlayEmbed, .overlayPDF { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.7); transition: opacity 500ms; visibility: hidden; opacity: 0;}
+.overlay:target, .overlayEmbed:target, .overlayPDF:target {visibility: visible; opacity: 1; z-index:1000;}
+.popup {margin: 150px auto; padding: 20px; background: #fff; border-radius: 5px; max-width: 40%; position: relative;
+transition: all 1s ease-in-out; max-height: 60%; overflow: auto; }
+@media screen and (max-width: 450px) {
+	.popup {max-width: 75%;}
+}
+.submit-button {background-color:#6fc67e;}
+.hover-effects:hover {font-weight:500;}
+.zero {visibility:hidden; font-size:0;}
+.breadcrumbs-back-arrow-pos {font-size:34px; color:#2895f1 !important;}
+.breadcrumbs-section-pos {color:#2895f1 !important;}
+.breadcrumbs-ul-pos {position: relative;}
+.breadcrumbs-li-pos {margin-right:8px !important;}
+.base-pose-class {border:2px solid mediumvioletred !important; position:relative; text-align:center;}
+.base-pose-class2 {border:1px solid mediumvioletred !important; position:relative; text-align:center;}
+.base-pose-text {position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:#bbb;}
+.base-pose-text2 {position:absolute; top:8px; left:30%; color:#bbb;}
+.anchor-hover:hover {color:#2895f1 !important;}
+.underline {border-bottom:1px solid #ccc; width:20%;}
+.prop-icon {width:40px; height:auto;}
+.prop-icon-opacity {opacity:0.8;}
+.prop-bolster {width:60px !important; height:30px !important;}
+.prop-stool, .prop-chair, .prop-wall {width:25px !important; height:50px !important;}
+.prop-yoga-mat, .prop-towel, .prop-block, .prop-strap {width:50px !important;}
+.prop-blanket {width:75px !important;}
+.help-images {max-width:100%; -webkit-box-shadow:0px 8px 8px #ddd; -moz-box-shadow:0px 8px 8px #ddd; box-shadow:0px 8px 8px #ddd; border:1px solid #dcdcd8;}
+.my-seqs-custom-pose {max-width:110px; display:inline-block; font-size:13px; color:#888; vertical-align:top; padding-top:35px; font-weight:100; overflow:-webkit-paged-x; padding-bottom:10px;}
+@media screen and (max-width: 450px) {
+	.my-seqs-custom-pose {max-width:29%;}
+}
+#displaySiteSearchPoses, #displaySiteSearchPoses2 {background-color:#fff;text-align:center; border-radius:5px;}
+.site-search-pose-image {max-width:115px; }
+.site-search-pose-image:hover {background-color:#F7F9FA; font-weight:500; border:1px solid #ddd; }
+.site-search-pose-title {display:inline-block; font-size:14px; color:deeppink; text-transform:capitalize; height:5em; vertical-align:top;}
+.notification {font-size:13px; padding:16px; border:1px solid #dcdcd8; border-radius: 6px; -webkit-box-shadow:0px 8px 8px #ddd; -moz-box-shadow:0px 8px 8px #ddd; box-shadow:0px 8px 8px #ddd;}
+li.site-search-req-pose, li.site-search-pose-image {list-style-type:none;}
+.site-search-req-pose:hover {font-weight:500;}
+.ppoption {text-align:center; margin-bottom:4em; padding:4em 0 4em 0; border-bottom:1px solid #dcdcd8;}
+.ppoptiontitle {margin-bottom:2em;}
+.tseq-tab {min-width:6.5em;}
+.logo-text-pos {position:absolute; bottom:0; left:50%; transform: translate(-50%, -50%); color:deeppink; font-size:14px;}
+
+div.page-actions {text-align:right; padding-top:4px;}
+.page-actions-elem {float:right; margin-left:1em;}
+a.page-cta-add {color:deeppink !important;}
+.page-cta-error {color:#ccc; font-size:14px;}
+
+

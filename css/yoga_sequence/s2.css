@@ -1,0 +1,49 @@
+@page {size: auto;  /* auto is the current printer page size */
+	   margin: 4mm;/* this affects the margin in the printer settings */
+}
+
+/*@media print{@page {size: landscape}}*/ 
+
+body {margin: 0mm; /* this affects the margin on the content before sending to printer */} 
+.sequence-author {font-size:0.8em !important;}
+.sequence-metadata-all-labels {margin:0; padding:0;}
+.sequence-metadata-label-header, .sequence-metadata-label-data {font-size:0.9em !important; width:auto;}
+.sequence-metadata-label-data {color:#222;}
+.no-print {display:none !important;}
+.poweredBy {display:block; margin:1em; font-size:0.7em; color:#dcdcd8; text-align:right;}
+
+.header {border:0 !important;}
+.layout-70 {width:100% !important; margin:0; float:none; border:0;}
+.layout-70.site-column {border:0 !important; box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;}
+.site-left-nav-layout {max-width:100%; margin:0; float:none; border:0; display:block; width:100%;}
+.sequence-metadata-all-labels {border:0;	}
+h1 {font-size:1.2em !important; color:#000 !important;}
+
+.yoga-sequence-container-box {box-shadow:none; padding:0 !important; margin:0 auto; border:0;}
+#yogaSequenceList {padding-bottom:0;}
+.yoga-pose-basic-data {box-shadow:none; page-break-inside:avoid !important; /* or 'auto' */ margin:0 !important; -webkit-region-break-inside: avoid !important;}
+li {page-break-inside:avoid;}
+
+/*
+img {page-break-inside:avoid; width:90px; height:95px;}
+#yogaSequenceList > li {width:100px%; height:100px; font-size:0.4em; margin-top:2em;}
+
+.sms {font-size:0.4em; color:#777 !important;}
+.sdesc {font-size:0.6em; color:#777 !important;}
+*/
+
+.sequence-title {font-size:1em;}
+.sdesc {font-size:0.7em; color:#777 !important;}
+.sanskrit-title > a {color: #000 !important;}
+.sequence-title {color:#000 !important; text-align:center;}
+.shared-sequence-container {border: 0 !important; margin-top:0 !important;}
+.profile-mtd {border-top:1px solid #eee; padding:2em; margin-top:2em;}
+.zero {visibility:visible; font-size:18px; margin:24px; padding:12px; color:#cd8423; position:relative !important; left:0 !important;}
+
+#yogaSequenceList {padding:0 !important;}
+#yogaSequenceList > li {padding:4px !important;}
+.sequence-metadata {margin-top:0 !important;}
+.yoga-seq-yoga-pose-notes {padding:0 !important;}
+.main-col {padding: 0 !important;}
+.yoga-seq-yoga-pose-notes {line-height:20px !important;}
+
