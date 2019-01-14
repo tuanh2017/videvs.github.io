@@ -245,6 +245,14 @@
   				);
   		
   		}
+
+  		var href= $(location).attr('href');
+  		
+  		var anchor = href.substr(href.indexOf("#"),1000);
+  		console.log(anchor)
+  		 $('html, body').animate({
+	        scrollTop: $(anchor).offset().top
+	    }, 2000);
   	}
 
   </script>
