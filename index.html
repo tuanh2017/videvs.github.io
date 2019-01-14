@@ -244,6 +244,7 @@
   	function dsp(json){
   		var entries = json.feed.entry;
   		for (var i in entries){
+        console.log(entries[i]);
   			var link = entries[i].link[2];
   			var href = link.href;
   			var s = href.split("/");
@@ -274,26 +275,7 @@
 	    }, 2000);
   	}
 
-    $(document).ready(function() {
-      var post_list = [ {href:"yoga-therapy-endometriosis",title:"Yoga Therapy Sequence: Yoga For Endometriosis"},
-                    ];
-    
-      for (var i in post_list){
-          var color = 'btn-indigo';
-          if (i%2==0){
-            color = 'btn-unique';
-          }
-          var idx = parseInt(i) +1;
-          var title = post_list[i].title;
-          var href = post_list[i].href;
-          $(".tbl_list_2").append(
-              '<tr id="'+i+'">'
-                        +'<td><a class="text-left btn-lg btn '+color+' btn-block waves-effect waves-light" target="_blank" href="yoga-seq/'+href+'.html">'+idx+".&nbsp;&nbsp;&nbsp;"+title+'</a></td>'
-                      +'</tr>'
-          );
-         
-      }
-    });
+   
   </script>
   <script src="https://videvs.blogspot.com/feeds/posts/default/-/Yoga?alt=json-in-script&callback=dsp&max-results=500"></script>
 </body>
