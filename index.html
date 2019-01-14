@@ -267,6 +267,8 @@
 
   		var href= $(location).attr('href');
   		var anchor = href.substr(href.indexOf("#"),1000);
+      if (anchor.indexOf("#")>=0)
+
   		 $('html, body').animate({
 	        scrollTop: $(anchor).offset().top
 	    }, 2000);
