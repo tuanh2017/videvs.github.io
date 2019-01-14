@@ -138,14 +138,14 @@
                     <hr>
                     <h2 class="font-weight-bold my-4 text-center mb-5 mt-4 font-weight-bold">
                       <strong>Yoga Sequence</strong>
-                      <a href="yoga-therapy-endometriosis.html">aaaa</a>
+
                     </h2>
                      <div class="row mt-5">
                       <div class="col-md-12">
                         <table class="table">
     
                             <!--Table body-->
-                            <tbody class="tbl_list">
+                            <tbody class="tbl_list_2">
                             
                             </tbody>
                             <!--Table body-->
@@ -266,14 +266,33 @@
   		}
 
   		var href= $(location).attr('href');
-  		
   		var anchor = href.substr(href.indexOf("#"),1000);
-  		console.log(anchor)
   		 $('html, body').animate({
 	        scrollTop: $(anchor).offset().top
 	    }, 2000);
   	}
 
+    $(document).ready(function() {
+      var post_list = [ {href:"yoga-therapy-endometriosis",title:"Yoga Therapy Sequence: Yoga For Endometriosis"},
+                        {href:"yoga-therapy-endometriosis-2",title:"Yoga Therapy Sequence: Yoga For Endometriosis-2"},
+                    ];
+    
+      for (var i in post_list){
+          var color = 'btn-indigo';
+          if (i%2==0){
+            color = 'btn-unique';
+          }
+          var idx = parseInt(i) +1;
+          var title = post_list[i].title;
+          var href = post_list[i].href;
+          $(".tbl_list_2").append(
+              '<tr id="'+i+'">'
+                        +'<td><a class="text-left btn-lg btn '+color+' btn-block waves-effect waves-light" href="yoga-seq/'+href+'.html">'+idx+".&nbsp;&nbsp;&nbsp;"+title+'</a></td>'
+                      +'</tr>'
+          );
+         
+      }
+    });
   </script>
   <script src="https://videvs.blogspot.com/feeds/posts/default/-/Yoga?alt=json-in-script&callback=dsp&max-results=500"></script>
 </body>
