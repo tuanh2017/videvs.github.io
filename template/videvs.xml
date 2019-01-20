@@ -196,7 +196,7 @@ var maxresults=8;
 </script>
   <div class='wp_rp_wrap  wp_rp_vertical_m' id='wp_rp_first'>
     <div class='wp_rp_content'>
-    <h3 class='related_post_title'>Related eBooks</h3>
+    <h3 class='related_post_title'>Related Posts</h3>
     <ul class='related_post wp_rp'>
     </ul>
     </div>

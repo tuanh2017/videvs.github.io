@@ -1,6 +1,1 @@
-member_bookmark_detail_n.js
-api_member.php
-dao_member_bookmark_schedule.php
-logic_member.php
-member_bookmark_detail_n.php
-item_n.js
+event.preventDefault();});$('#main-content').delegate('.font-size-minus','click',function(event){event.preventDefault();var entry=$('.entry-content'),fontSize=parseInt(entry.css('font-size').replace('px',''));if(fontSize<=14){return false;}else{entry.css('font-size',fontSize-2).css('line-height','1.5');}});$('#main-content').delegate('.font-size-plus','click',function(event){event.preventDefault();var entry=$('.entry-content'),fontSize=parseInt(entry.css('font-size').replace('px',''));if(fontSize>=22){return false;}else{entry.css('font-size',fontSize+2).css('line-height','1.5');}});}}})();var common=(function(){return{init:function(){jQuery('.site-nav').superfish({delay:100,animation:{opacity:'show',height:'show'},speed:'fast'});}}})();var init={blog:function(){blog.init();},content_single:function(){content_single.init();},common:function(){common.init();}};var $page=jQuery('.site-content').attr('id');if(init[$page]){init[$page]();init['common']();}else{init['common']();}})(jQuery); 
