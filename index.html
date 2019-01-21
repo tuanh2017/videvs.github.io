@@ -150,9 +150,20 @@
   			var href = link.href;
   			var s = href.split("/");
   			var id = s[s.length-1].replace(".html","");
-  			var content = $($(entries[i].content.$t)[0]).find(".entry-content").html();
+  			var content = $($(entries[i].content.$t)[0]).find(".entry-content").text();
   			content = content.replace("Book Description:","");
   			content = $.trim(content);
+        content = content.split(/\s+/).slice(0,49).join(" ")+"... ";
+
+        var dl_btn = '<div class="row mt-2">'
+                     +'<div class="col-sm-12">'
+                     +'   <div class="text-center">'
+                     +'     <a  href="'+href+'" class="btn btn-success btn-sm"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</button>'
+                     +'  </div>'
+                     +'</div>'
+                    +'</div>';
+        content +=dl_btn;
+  
   			var title= link.title;
   			var idx= parseInt(i)+1;
   			var color = 'btn-indigo';
