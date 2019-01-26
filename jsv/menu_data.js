@@ -13,7 +13,7 @@ for (var i in main_menu){
 				sub_menu+="<li><a href='https://videvs.blogspot.com/search/label/"+encodeURIComponent(menu_i.sub_menu[k])+"?max-result="+mr+"'>"+menu_i.sub_menu[k]+"</a></li>";
 			sub_menu+="</ul>";
 			sub_menu_class ="menu-item-has-children";
-		}
+		} 
 		s_menu.append('<li><a href="/search/label/'+key+'?max-results='+mr+'">'+menu_i.title+'</a></li>')
 		m_menu.append("<li class='menu-item "+sub_menu_class+"'><a href='/search/label/"+key+"?max-results="+mr+"'>"+menu_i.title+"</a>" +sub_menu);
 	}
