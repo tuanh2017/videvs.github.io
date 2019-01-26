@@ -54,35 +54,7 @@ img{border:0 }body{margin:0 }article,aside,footer,header,nav,section{display:blo
 </style>
  <b:include data='blog' name='google-analytics'/>
   <script type='text/javascript'>//<![CDATA[
-   function stripTags(i){var e=":",n=i.indexOf(e);return n>0&&(i=i.substr(n+e.length)),i.split(/\s+/).slice(0,49).join(" ")}
-  function createSummary(id,title,url) {
-	var ec = stripTags(jQuery("#"+id+" .entry-content").text());
-	var img_src = jQuery("#"+id+" img").attr("src");
-	var labels = '';
-	jQuery.each( jQuery("#"+id+" .p_author"), function( i, val ) {
-		if (labels!='') labels+=",&nbsp";
-			labels+=  val.outerHTML;
-	});
-	
-	var html = 
-		  '<div class="entry-thumbnail hover-thumb">'
-		  +'<a href="'+url+'" rel="bookmark">'
-		  +'<img alt="'+title+'" class=" attachment-post-thumbnail wp-post-image" height="493" src="'+img_src+'" width="400">'
-		  +'</a>'
-		  +'</div>'
-		  +'<div class="entry-body">'
-		  +'<header class="entry-header">'
-		  +'<h2 class="entry-title"><a href="'+url+'" rel="bookmark">'+title+'</a></h2>'
-		  +'<div class="entry-meta">'
-		  +'<span class="author vcard">'
-		  +'<span class="entry-author">By: '+labels+'</span>'
-		  +'</span>'
-		  +'</div>'
-		  +'</header>'
-		  +'<div class="entry-summary">'+ ec+'...'+'</div></div>'
-		 ;
-	jQuery("#"+id).html(html);
- }
+   function stripTags(a){var t=a.indexOf(":");return t>0&&(a=a.substr(t+":".length)),a.split(/\s+/).slice(0,49).join(" ")}function createSummary(a,t,r){var e=stripTags(jQuery("#"+a+" .entry-content").text()),s=jQuery("#"+a+" img").attr("src"),n="";jQuery.each(jQuery("#"+a+" .p_author"),function(a,t){""!=n&&(n+=",&nbsp"),n+=t.outerHTML});var i='<div class="entry-thumbnail hover-thumb"><a href="'+r+'" rel="bookmark"><img alt="'+t+'" class=" attachment-post-thumbnail wp-post-image" height="493" src="'+s+'" width="400"></a></div><div class="entry-body"><header class="entry-header"><h2 class="entry-title"><a href="'+r+'" rel="bookmark">'+t+'</a></h2><div class="entry-meta"><span class="author vcard"><span class="entry-author">By: '+n+'</span></span></div></header><div class="entry-summary">'+e+"...</div></div>";jQuery("#"+a).html(i)}
 //]]></script>
   &lt;/head&gt;
 &lt;!--</head>--&gt;
@@ -186,13 +158,7 @@ img{border:0 }body{margin:0 }article,aside,footer,header,nav,section{display:blo
 var all_labels = [];
 var currentposturl=&quot;<data:post.url/>&quot;;
 var maxresults=8;
-<b:loop values='data:post.labels' var='label'>
-	<b:if cond='data:label.isLast != &quot;true&quot;'/>
-	<b:if cond='data:blog.pageType == &quot;item&quot;'>
-			if (&quot;<data:label.name/>&quot; !=&quot;IT Ebooks&quot;)
-				all_labels.push(&quot;<data:label.name/>&quot;);
-	</b:if>
-</b:loop>
+<b:loop values='data:post.labels' var='label'><b:if cond='data:label.isLast != &quot;true&quot;'/><b:if cond='data:blog.pageType == &quot;item&quot;'>all_labels.push(&quot;<data:label.name/>&quot;);</b:if></b:loop>
 </script>
   <div class='wp_rp_wrap  wp_rp_vertical_m' id='wp_rp_first'>
     <div class='wp_rp_content'>
@@ -222,20 +188,7 @@ var maxresults=8;
 
 <script type='text/javascript'>
 /*<![CDATA[*/
-var postperpage=5;
-var numshowpage=3;
-var upPageWord ='Prev';
-var downPageWord ='Next';
-var urlactivepage=location.href;
-var home_page="/";
-function loophalaman(e){var a="";nomerkiri=parseInt(numshowpage/2),nomerkiri==numshowpage-nomerkiri&&(numshowpage=2*nomerkiri+1),mulai=nomerhal-nomerkiri,mulai<1&&(mulai=1),maksimal=parseInt(e/postperpage)+1,maksimal-1==e/postperpage&&(maksimal-=1),akhir=mulai+numshowpage-1,akhir>maksimal&&(akhir=maksimal),a+="<span class='pages'>Page "+nomerhal+" of "+maksimal+"</span>";var r=parseInt(nomerhal)-1;nomerhal>1&&(a+=2==nomerhal?"page"==jenis?'<a href="'+home_page+'">'+upPageWord+"</a>":'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">'+upPageWord+"</a>":"page"==jenis?'<a href="#" onclick="redirectpage('+r+');return false">'+upPageWord+"</a>":'<a href="#" onclick="redirectlabel('+r+');return false">'+upPageWord+"</a></span>"),mulai>1&&(a+="page"==jenis?'<a href="'+home_page+'">1</a>':'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">1</a>'),mulai>2&&(a+="");for(var t=mulai;t<=akhir;t++)a+=nomerhal==t?'<span class="current">'+t+"</span>":1==t?"page"==jenis?'<a href="'+home_page+'">1</a></span>':'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">1</a>':"page"==jenis?'<a href="#" onclick="redirectpage('+t+');return false">'+t+"</a>":'<a href="#" onclick="redirectlabel('+t+');return false">'+t+"</a></span>";akhir<maksimal-1&&(a+=""),akhir<maksimal&&(a+="page"==jenis?'<a href="#" onclick="redirectpage('+maksimal+');return false">'+maksimal+"</a>":'<a href="#" onclick="redirectlabel('+maksimal+');return false">'+maksimal+"</a>");var s=parseInt(nomerhal)+1;nomerhal<maksimal&&(a+="page"==jenis?'<a href="#" onclick="redirectpage('+s+');return false">'+downPageWord+"</a>":'<a href="#" onclick="redirectlabel('+s+');return false">'+downPageWord+"</a>");for(var l=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),i=0;i<l.length;i++)l[i].innerHTML=a;l&&l.length>0&&(a=""),n&&(n.innerHTML=a)}function hitungtotaldata(e){var a=e.feed;loophalaman(parseInt(a.openSearch$totalResults.$t,10))}function halamanblogger(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(lblname1=lblname1=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):/search\/label\/(.+)?/.exec(e)[1],lblname1=lblname1.replace("?max-results=5","")),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(jenis="page",nomerhal=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,
-jQuery.ajax({type: "GET",url: home_page+"feeds/posts/summary?max-results=1&alt=json-in-script&callback=hitungtotaldata" })
-):(jenis="label",-1==e.indexOf("&max-results=")&&(postperpage=20),nomerhal=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,
-jQuery.ajax({type: "GET",url: home_page+"feeds/posts/summary/-/"+lblname1+"?alt=json-in-script&callback=hitungtotaldata&max-results=1" })
-
-))}function redirectpage(e){jsonstart=(e-1)*postperpage,nopage=e;var a=document.getElementsByTagName("head")[0],r=document.createElement("script");r.type="text/javascript",r.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(r)}function redirectlabel(e){jsonstart=(e-1)*postperpage,nopage=e;var a=document.getElementsByTagName("head")[0],r=document.createElement("script");r.type="text/javascript",r.setAttribute("src",home_page+"feeds/posts/summary/-/"+lblname1+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(r)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),r=encodeURIComponent(a);if("page"==jenis)var t="/search?updated-max="+r+"&max-results="+postperpage+"#PageNo="+nopage;else t="/search/label/"+lblname1+"?updated-max="+r+"&max-results="+postperpage+"#PageNo="+nopage;location.href=t}
-var nopage,jenis,nomerhal,lblname1;
-setTimeout(halamanblogger(),100);
+var nopage,jenis,nomerhal,lblname1,postperpage=5,numshowpage=3,upPageWord="Prev",downPageWord="Next",urlactivepage=location.href,home_page="/";function loophalaman(e){var a="";nomerkiri=parseInt(numshowpage/2),nomerkiri==numshowpage-nomerkiri&&(numshowpage=2*nomerkiri+1),mulai=nomerhal-nomerkiri,mulai<1&&(mulai=1),maksimal=parseInt(e/postperpage)+1,maksimal-1==e/postperpage&&(maksimal-=1),akhir=mulai+numshowpage-1,akhir>maksimal&&(akhir=maksimal),a+="<span class='pages'>Page "+nomerhal+" of "+maksimal+"</span>";var r=parseInt(nomerhal)-1;nomerhal>1&&(a+=2==nomerhal?"page"==jenis?'<a href="'+home_page+'">'+upPageWord+"</a>":'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">'+upPageWord+"</a>":"page"==jenis?'<a href="#" onclick="redirectpage('+r+');return false">'+upPageWord+"</a>":'<a href="#" onclick="redirectlabel('+r+');return false">'+upPageWord+"</a></span>"),mulai>1&&(a+="page"==jenis?'<a href="'+home_page+'">1</a>':'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">1</a>'),mulai>2&&(a+="");for(var t=mulai;t<=akhir;t++)a+=nomerhal==t?'<span class="current">'+t+"</span>":1==t?"page"==jenis?'<a href="'+home_page+'">1</a></span>':'<a href="/search/label/'+lblname1+"?max-results="+postperpage+'">1</a>':"page"==jenis?'<a href="#" onclick="redirectpage('+t+');return false">'+t+"</a>":'<a href="#" onclick="redirectlabel('+t+');return false">'+t+"</a></span>";akhir<maksimal-1&&(a+=""),akhir<maksimal&&(a+="page"==jenis?'<a href="#" onclick="redirectpage('+maksimal+');return false">'+maksimal+"</a>":'<a href="#" onclick="redirectlabel('+maksimal+');return false">'+maksimal+"</a>");var l=parseInt(nomerhal)+1;nomerhal<maksimal&&(a+="page"==jenis?'<a href="#" onclick="redirectpage('+l+');return false">'+downPageWord+"</a>":'<a href="#" onclick="redirectlabel('+l+');return false">'+downPageWord+"</a>");for(var s=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),p=0;p<s.length;p++)s[p].innerHTML=a;s&&s.length>0&&(a=""),n&&(n.innerHTML=a)}function hitungtotaldata(e){var a=e.feed;loophalaman(parseInt(a.openSearch$totalResults.$t,10))}function halamanblogger(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(lblname1=(lblname1=lblname1=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):/search\/label\/(.+)?/.exec(e)[1]).replace("?max-results=5","")),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(jenis="page",nomerhal=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,jQuery.ajax({type:"GET",url:home_page+"feeds/posts/summary?max-results=1&alt=json-in-script&callback=hitungtotaldata"})):(jenis="label",-1==e.indexOf("&max-results=")&&(postperpage=20),nomerhal=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,jQuery.ajax({type:"GET",url:home_page+"feeds/posts/summary/-/"+lblname1+"?alt=json-in-script&callback=hitungtotaldata&max-results=1"})))}function redirectpage(e){jsonstart=(e-1)*postperpage,nopage=e;var a=document.getElementsByTagName("head")[0],r=document.createElement("script");r.type="text/javascript",r.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(r)}function redirectlabel(e){jsonstart=(e-1)*postperpage,nopage=e;var a=document.getElementsByTagName("head")[0],r=document.createElement("script");r.type="text/javascript",r.setAttribute("src",home_page+"feeds/posts/summary/-/"+lblname1+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(r)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),r=encodeURIComponent(a);if("page"==jenis)var t="/search?updated-max="+r+"&max-results="+postperpage+"#PageNo="+nopage;else t="/search/label/"+lblname1+"?updated-max="+r+"&max-results="+postperpage+"#PageNo="+nopage;location.href=t}setTimeout(halamanblogger(),100);
 /*]]>*/
 </script>
 </b:if>
@@ -310,6 +263,8 @@ for (var i in main_menu){
 	}
 }
 if (!(typeof(all_labels)==="undefined" )){
+	rmidx = all_labels.indexOf("IT Ebooks");
+	if (rmidx >=0) all_labels.splice(rmidx,1);
 	for (var i in all_labels)
 		$.ajax({type: "GET",
 			url: "/feeds/posts/default/-/"+all_labels[i]+"?alt=json-in-script&callback=related_results_labels_thumbs&max-results=8"});
