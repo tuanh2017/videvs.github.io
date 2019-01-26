@@ -22,4 +22,4 @@ sub_menu+="<li><a href='https://videvs.blogspot.com/search/label/"+encodeURIComp
 s_menu.append('<li><a href="/search/label/'+key+'?max-results='+mr+'">'+menu_i.title+'</a></li>')
 m_menu.append("<li class='menu-item "+sub_menu_class+"'><a href='/search/label/"+key+"?max-results="+mr+"'>"+menu_i.title+"</a>"+sub_menu)}}
 
-jQuery(".site-nav").superfish({delay:100,animation:{opacity:"show",height:"show"},speed:"fast"});
+jQuery(".site-nav").superfish({delay:100,animation:{opacity:"show",height:"show"},speed:"fast"}); 
