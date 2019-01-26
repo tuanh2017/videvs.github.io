@@ -21,3 +21,5 @@ var s_menu=jQuery(".list-categories");var m_menu=jQuery(".main_menu");for(var i 
 sub_menu+="<li><a href='https://videvs.blogspot.com/search/label/"+encodeURIComponent(menu_i.sub_menu[k])+"?max-result="+mr+"'>"+menu_i.sub_menu[k]+"</a></li>";sub_menu+="</ul>";sub_menu_class="menu-item-has-children"}
 s_menu.append('<li><a href="/search/label/'+key+'?max-results='+mr+'">'+menu_i.title+'</a></li>')
 m_menu.append("<li class='menu-item "+sub_menu_class+"'><a href='/search/label/"+key+"?max-results="+mr+"'>"+menu_i.title+"</a>"+sub_menu)}}
+
+jQuery(".site-nav").superfish({delay:100,animation:{opacity:"show",height:"show"},speed:"fast"});
