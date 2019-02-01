@@ -173,14 +173,24 @@ var maxresults=8;
 
 
 
-var relObj=[],uniq_href=[],ri=0;function related_results_labels_thumbs(e){for(var r=0;r<e.feed.entry.length;r++)for(var l=e.feed.entry[r],t=0;t<l.link.length;t++)"alternate"==l.link[t].rel&&-1==uniq_href.indexOf(l.link[t].href)&&l.link[t].href!=currentposturl&&(uniq_href.push(l.link[t].href),relObj.push({t:l.link[t].title,h:l.link[t].href,i:/<img.+?src="(.+?)"/.exec(l.content.$t)[1]}));for(;ri<maxresults&&relObj.length>0;){var n=Math.floor((relObj.length-1)*Math.random());jQuery(".related_post").append('<li><a class="wp_rp_thumbnail" href="'+relObj[n].h+'"><img  src="'+relObj[n].i.replace(".jpg","m.jpg")+'"/><a/><a href="'+relObj[n].h+'">'+relObj[n].t+"</a></li>"),relObj.splice(n,1),ri++}}
+var relObj=[],uniq_href=[],ri=0;
+
+function related_results_labels_thumbs(e){for(var r=0;r<e.feed.entry.length;r++)for(var l=e.feed.entry[r],t=0;t<l.link.length;t++)"alternate"==l.link[t].rel&&-1==uniq_href.indexOf(l.link[t].href)&&l.link[t].href!=currentposturl&&(uniq_href.push(l.link[t].href),relObj.push({t:l.link[t].title,h:l.link[t].href,i:/<img.+?src="(.+?)"/.exec(l.content.$t)[1]}));for(;ri<maxresults&&relObj.length>0;){var n=Math.floor((relObj.length-1)*Math.random());jQuery(".related_post").append('<li><a class="wp_rp_thumbnail" href="'+relObj[n].h+'"><img  src="'+relObj[n].i.replace(".jpg","m.jpg")+'"/><a/><a href="'+relObj[n].h+'">'+relObj[n].t+"</a></li>"),relObj.splice(n,1),ri++}}
 
 jQuery(document).ready(function($){
 if (!(typeof(all_labels)==="undefined" )){
 	rmidx = all_labels.indexOf("IT Ebooks");
 	if (rmidx >=0) all_labels.splice(rmidx,1);
 	for (var i in all_labels){
-	
+		$.ajax({
+			url: "/feeds/posts/default/-/"+all_labels[i]+"?alt=json&v=2&max-results=8",
+			contentType: 'application/json',
+		})
+		.done(function(e) {
+			related_results_labels_thumbs(e);
+		})
+		
+		
 		$.get("/feeds/posts/default/-/"+all_labels[i]+"?alt=json-in-script&callback=related_results_labels_thumbs&max-results=8");
 	}
 }
