@@ -214,7 +214,52 @@
 			margin-left: .5rem!important;
 			margin-right: .5rem!important;
 	}
-
+div.wp_rp_content {
+    display: inline-block!important;
+}
+.wp_rp_wrap .related_post_title {
+    clear: both;
+    padding: 0!important;
+    margin: 0!important;
+}
+ul.related_post {
+    display: inline-block!important;
+    position: relative!important;
+    margin: 0!important;
+    padding: 0!important;
+}
+ul.related_post li {
+    position: relative!important;
+    display: inline-block!important;
+    vertical-align: top!important;
+    zoom: 1!important;
+    width: 155px!important;
+    margin: 15px 10px 15px 0!important;
+    padding: 0!important;
+    background: 0 0!important;
+}
+ul.related_post li a {
+    position: relative!important;
+    display: block!important;
+    font-size: 14px!important;
+    line-height: 1.6em!important;
+    text-decoration: none!important;
+    margin-bottom: 5px!important;
+    text-indent: 0!important;
+}
+ul.related_post li img {
+    display: block!important;
+    width: 155px!important;
+    height: 210px!important;
+    max-width: 100%!important;
+    margin: 0!important;
+    padding: 0!important;
+    background: 0 0!important;
+    border: none!important;
+    border-radius: 3px!important;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2)!important;
+    vertical-align: middle;
+}
 	@media only screen and (min-width: 600px) {
 		.mypost .thumb{
 			width: 100%;
@@ -225,6 +270,9 @@
 	} 
 	
 	@media only screen and (max-width: 480px) {
+		h2{
+			font-size: 1.40rem;
+		}
 		.container a{
 			font-weight: bold;
 
@@ -244,7 +292,28 @@
 			display: inline!important;
 		}
 
+		ul.related_post li {
+		     width: 160px!important;
+		   
+		}
+		
+		ul.related_post li img {
+		    width: 160px!important;
+		   	height: 190px!important;
+		}
 	} 
+	@media only screen and (max-width: 360px) {
+	
+		ul.related_post li {
+		     width: 155px!important;
+		}
+		
+		ul.related_post li img {
+		    width: 155px!important;
+		   
+		}
+	} 
+	
 	@media only screen and (max-width: 320px) {
 		.mypost .thumb{
 			width: 60px;
@@ -253,7 +322,16 @@
 		.mypost .title{
 			font-size: 16px;
 		}
-
+		ul.related_post li {
+		     width: 135px!important;
+		    
+		   
+		}
+		
+		ul.related_post li img {
+		    width: 135px!important;
+		    height: 160px!important;
+		}
 	} 
 	
 
@@ -333,13 +411,20 @@
    </article>
    <div class="post-outer"></div>
 </div>
-		</div>
+
+<div class="wp_rp_content">
+<h5 class="related_post_title">Related Posts:</h5>
+<ul class="related_post wp_rp">
+<li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/yoga-thuc-hanh-cho-moi-lua-tuoi.html"><img src="https://i.imgur.com/ABxySTE.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/yoga-thuc-hanh-cho-moi-lua-tuoi.html">Yoga thực hành (cho mọi lứa tuổi)</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/cac-ky-nang-yoga-danh-cho-nha-tri-lieu.html"><img src="https://i.imgur.com/wP84qnF.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/cac-ky-nang-yoga-danh-cho-nha-tri-lieu.html">Các kỹ năng Yoga dành cho nhà trị liệu</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/yoga-path-to-holistic-heath.html"><img src="https://i.imgur.com/g2oc1oo.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/yoga-path-to-holistic-heath.html">Yoga The Path To Holistic Heath</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/2100-asanas_26.html"><img src="https://i.imgur.com/HTtbRD7.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/2100-asanas_26.html">2100 Asanas</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/so-tay-tu-luyen-tap-yoga.html"><img src="https://i.imgur.com/mseFs27.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/so-tay-tu-luyen-tap-yoga.html">Sổ tay tự luyện tập Yoga</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/yoga-for-dummies.html"><img src="https://i.imgur.com/RBU0pEm.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/yoga-for-dummies.html">Yoga For Dummies</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/peak-pose-sequence-with-urdhva.html"><img src="https://i.imgur.com/PLkw7Qs.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/peak-pose-sequence-with-urdhva.html"> Peak Pose Sequence with Urdhva Dhanurasana and Sirsasana</a></li><li><a class="wp_rp_thumbnail" href="https://videvs.blogspot.com/2019/01/yoga-truong-sinh-cho-moi-nguoi.html"><img src="https://i.imgur.com/DoCy3kG.jpg"></a><a></a><a href="https://videvs.blogspot.com/2019/01/yoga-truong-sinh-cho-moi-nguoi.html">Yoga trường sinh cho mọi người</a></li></ul>
+</div>
+</div>
+
+
 		<div class="col-md-3">
 			
 		</div>
 	</div>
 
-	
 <footer class="mt-5">
  	
  </footer>
