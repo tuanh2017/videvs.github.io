@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<!-- Bootstrap CSS -->
+		
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha256-azvvU9xKluwHFJ0Cpgtf0CYzK7zgtOznnzxV4924X1w=" crossorigin="anonymous" />
+		<style>
+		/* commoncss */
+
+.bg-nav{
+background-color:   #4267b2;
+
+}
+.menu{
+    border: 1px solid #e5e5e5;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-radius: 2px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+.menu div{
+  margin-bottom: .5rem!important;
+}
+
+}
+a:hover{
+text-decoration: none;
+}
+nav a{
+color:  white;
+white-space: nowrap;
+}
+nav a:hover{
+background: rgba(0, 0, 0, .1);
+border-radius: 3px;
+color:  white;
+outline: none;
+z-index: 1;
+}
+		/* commoncss */
+.border{
+	border: 0.8px solid #94979b!important;
+}
+/*
+ * Custom translucent site header
+ */
+.site-nav {
+  background-color: rgba(0, 0, 0, .85);
+}
+.site-nav a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active_menu_1{
+	border-bottom: 3px solid rgb(210,210,210);
+	border-radius: 1px;
+	padding-bottom: 1px;
+}
+
+/*
+ * Extra utilities
+ */
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box{display: flex;}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.box-shadow-bot-bold { box-shadow: 1px 1px 3px #000; }
+
+.box-shadow-top-bold { box-shadow: 1px -1px 5px #000; }
+
+.text-shadow{ text-shadow: 1px 1px 3px #000; }
+
+.fs-xhuge{font-size: 300%;}
+.fs-huge{font-size: 200%;}
+.fs-xl{ font-size: 140%;}
+.{ font-size: 120%;}
+.fs-s{ font-size: 80%;}
+.fs-xs{ font-size: 70%;}
+
+
+/*pink*/
+.bg-Cherry-blossom{
+	background-color: #FCC9B9 !important;
+}
+.bg-peach{
+	background-color: #F47983;
+}
+.bg-ibis-wing{
+	background-color: #F58F84;
+}
+.bg-washed-out-crimson{
+	background-color: #FFB3A7;
+}
+.bg-medium-crimson{
+	background-color: #C93756 !important;
+}
+.bg-medium-crimson:HOVER{
+	background-color: #96293f!important;
+}
+
+
+/*red*/
+.bg-true-red{
+	background-color: #8F1D21;
+}
+
+/*blue*/
+.bg-light-blue{
+	background-color: #48929B;
+}
+.bg-dodger-blue{
+	background-color: #19B5FE;
+}
+.bg-jordy-blue{
+	background-color: #89C4F4 !important;
+}
+.bg-ice-blue{
+	background-color: #f2f9ff;
+}
+.bg-hanada{
+	background-color: #044F67;
+}
+.bg-steel-blue{
+	background-color: #4B77BE !important;
+}
+.bg-steel-blue:HOVER{
+	background-color: #2f4f84!important;
+}
+.bg-lapis-lazuli{
+	background-color: #1F4788!important;
+}
+.bg-picton-blue{
+	background-color: #59ABE3!important;
+}
+.bg-picton-blue:HOVER{
+	background-color: #3097dc!important;
+}
+
+/*yellow*/
+.bg-ripe-lemon{
+	background-color: #F7CA18;
+}
+.bg-cream-can{
+	background-color: #F5D76E;
+}
+.bg-skin-tone{
+	background-color: #FFEFCC!important;
+}
+.bg-amber{
+	background-color: #CA6924;
+}
+
+/*green*/
+.bg-gossip{
+	background-color: #87D37C !important;
+}
+
+/*gray*/
+.bg-silver{
+	background-color: #BFBFBF !important;
+}
+.bg-cararra{
+	background-color: #F2F1EF;
+}
+
+/*blue*/
+.text-light-blue{
+	color: #48929B;
+}
+.text-dodger-blue{
+	color: #19B5FE;
+}
+.text-jordy-blue{
+	color: #89C4F4 !important;
+}
+.text-ice-blue{
+	color: #f2f9ff;
+}
+.text-hanada{
+	color: #044F67;
+}
+.text-steel-blue{
+	color: #4B77BE;
+}
+.text-steel-blue:HOVER{
+	color: #2f4e82;
+}
+
+/*yellow*/
+.text-saffron{
+	color: #F4D03F;
+}
+.text-cream-can{
+	color: #F5D76E !important;
+}
+
+
+/*green*/
+.text-gossip{
+	color: #87D37C !important;
+}
+.text-green-neon{
+	color: #63ff44;
+}
+.text-green-bamboo{
+	color: #006442;
+}
+
+
+/*pink*/
+.text-Cherry-blossom{
+	color: #fcc9b9 !important;
+}
+.text-Cherry-blossom:HOVER{
+	color: #f9835b!important;
+}
+.text-medium-crimson{
+	color: #C93756 !important;
+}
+.text-medium-crimson:HOVER{
+	color: #862437 !important;
+}
+/*RED*/
+.text-pomegranate{
+	color: #F22613 !important;
+}
+.text-pomegranate:HOVER{
+	color: #af160a!important;
+}
+
+.frm-search{
+min-width: 250px;
+}
+
+.fs-bold{
+font-weight: bold;
+}
+
+.container a:hover{
+color: blue
+}
+.mypost .thumb{
+width: 100%;
+}
+.mypost .title{
+margin-left: .5rem!important;
+margin-right: .5rem!important;
+}
+.blog-posts{
+margin: 0;
+}
+.entry-body-thumbnail {
+margin: 0;
+background-color: #fff;
+height: 100%;
+width: 20%;
+float: left;
+overflow: hidden;
+margin-top: 4px;
+}
+.entry-body-thumbnail img {
+width: 100%;
+height: auto;
+}
+.book-detail {
+width: 78%;
+margin-left: 22%;
+color: #2a3744;
+max-width: 745px;
+}
+.book-detail a{
+font-weight: bold;
+}
+.book-detail dl dt {
+float: left;
+padding: 5px 0 3px;
+width: 100px;
+}
+.book-detail dl dd {
+margin-left: 30px;
+padding: 5px 0 3px;
+height: auto!important;
+
+}
+.entry-content h3{
+font-size: 1.3rem;
+}
+.entry-header h4{
+font-style: italic;
+font-size: 1.0rem;
+}
+.single-post .entry-meta {
+color: #999;
+font-size: 14px;
+border-width: 1px 0;
+border-style: solid;
+border-color: #e5e5e5;
+padding: 10px 0;
+line-height: 30px;
+margin: 0 0 15px;
+}
+.single-post .entry-footer {
+margin-top: 15px;
+}
+.download-links a {
+padding: 0 20px;
+margin-right: 5px;
+color: #fff !important;
+display: inline-block;
+text-align: center;
+background-color: #ff4629  !important;
+line-height: 30px;
+height: 30px;
+}
+.download-links a:hover {
+
+background-color: #f52100 !important;
+}
+@media only screen and (min-width: 600px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+.container a{
+font-weight: bold;
+}
+.mypost .article{
+margin-left: 4px;
+margin-right: 4px;
+border-bottom: 1px #e4e2e2 solid;
+}
+.mypost .thumb{
+width: 100px;
+height: 125px;
+}
+.mypost .title{
+font-size: 18px;
+position: absolute;
+display: inline!important;
+}
+.mypost .thumb{
+width: 100%;
+height: 180px;
+display: inline!important;
+}
+.entry-body-thumbnail {
+width: 35%;
+}
+.entry-body-thumbnail img {
+width: 100%;
+
+}
+.book-detail {
+width: 63%;
+margin-left: 37%;
+}
+
+
+}
+@media only screen and (max-width: 320px) {
+.mypost .thumb{
+width: 60px;
+height: 80px;
+}
+.mypost .title{
+font-size: 16px;
+}
+}
+.bg-nav{
+background-color:   #4267b2;
+font-weight: bold;
+}
+
+a:hover{
+text-decoration: none;
+}
+nav a{
+color:  white;
+white-space: nowrap;
+}
+nav a:hover{
+background: rgba(0, 0, 0, .1);
+border-radius: 3px;
+color:  white;
+outline: none;
+z-index: 1;
+}
+.frm-search{
+min-width: 250px;
+}
+.fs-bold{
+font-weight: bold;
+}
+
+.container a:hover{
+color: #4267b2
+}
+.mypost .thumb{
+width: 100%;
+}
+.mypost .title{
+margin-left: .5rem!important;
+margin-right: .5rem!important;
+}
+div.wp_rp_content {
+display: inline-block!important;
+}
+.wp_rp_wrap .related_post_title {
+clear: both;
+padding: 0!important;
+margin: 0!important;
+}
+ul.related_post {
+display: inline-block!important;
+position: relative!important;
+margin: 0!important;
+padding: 0!important;
+}
+ul.related_post li {
+position: relative!important;
+display: inline-block!important;
+vertical-align: top!important;
+zoom: 1!important;
+width: 150px!important;
+margin: 15px 10px 15px 0!important;
+padding: 0!important;
+background: 0 0!important;
+}
+ul.related_post li a {
+position: relative!important;
+display: block!important;
+font-size: 14px!important;
+line-height: 1.6em!important;
+text-decoration: none!important;
+margin-bottom: 5px!important;
+text-indent: 0!important;
+}
+ul.related_post li img {
+display: block!important;
+width: 150px!important;
+height: 210px!important;
+max-width: 100%!important;
+margin: 0!important;
+padding: 0!important;
+background: 0 0!important;
+border: none!important;
+border-radius: 3px!important;
+box-shadow: 0 1px 4px rgba(0,0,0,.2)!important;
+vertical-align: middle;
+}
+@media only screen and (min-width: 600px) {
+.mypost .thumb{
+width: 100%;
+height: 180px;
+display: inline!important;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+h2{
+font-size: 1.40rem;
+}
+.container a{
+font-weight: bold;
+}
+.mypost .article{
+margin-left: 4px;
+margin-right: 4px;
+border-bottom: 1px #e4e2e2 solid;
+}
+.mypost .thumb{
+width: 100px;
+height: 125px;
+}
+.mypost .title{
+font-size: 18px;
+position: absolute;
+display: inline!important;
+}
+
+}
+@media only screen and (max-width: 360px) {
+
+ul.related_post li {
+width: 155px!important;
+}
+
+ul.related_post li img {
+width: 155px!important;
+
+}
+}
+
+@media only screen and (max-width: 320px) {
+.mypost .thumb{
+width: 60px;
+height: 80px;
+}
+
+.mypost .title{
+font-size: 16px;
+}
+ul.related_post li {
+width: 120px!important;
+
+
+}
+
+ul.related_post li img {
+width: 120px!important;
+height: 155px!important;
+}
+}
+
+.pagination span {
+	float: left;
+	padding: 2px 8px;
+	line-height: 20px;
+	text-decoration: none;
+	font-weight: 400;
+	background-color: #fafafa;
+	border: 1px solid #ddd;
+	color: #828282;
+	margin-left: 5px;
+	text-align: center;
+	margin-bottom: .5rem!important;
+}
+.pagination span.current {
+color: #fff;
+border-color: #ff4629;
+background-color: #ff4629;
+cursor: default;
+}
+
+
+</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark site-nav ">
+	<a  href="#">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="20px" viewBox="0 0 46.108 24" enable-background="new 0 0 46.108 24" xml:space="preserve">
+			
+<path fill="#EB5595" d="M15.861,4.797c-0.01-0.003-0.02-0.007-0.029-0.012L13.13,3.478c-0.105-0.051-0.163-0.166-0.14-0.281
+	c0.022-0.115,0.119-0.201,0.235-0.209l3.18-0.233c0.034-0.002,0.069,0.002,0.101,0.013c0.01,0.003,0.02,0.007,0.029,0.012
+	l2.332,1.129c0.102,0.049,0.159,0.16,0.142,0.272c-0.018,0.112-0.106,0.2-0.218,0.217l-2.81,0.413
+	C15.94,4.814,15.899,4.811,15.861,4.797z"></path>
+<path fill="#E52523" d="M7.605,2.305c-0.01-0.003-0.02-0.007-0.029-0.012L3.856,0.492C3.748,0.439,3.69,0.318,3.718,0.2
+	S3.852-0.001,3.973,0l4.573,0.054c0.027,0,0.054,0.005,0.08,0.014c0.01,0.003,0.02,0.007,0.029,0.011l3.172,1.536
+	c0.106,0.051,0.163,0.168,0.14,0.284S11.844,2.1,11.727,2.106L7.701,2.318C7.668,2.32,7.636,2.315,7.605,2.305z"></path>
+<path fill="#E83089" d="M4.388,6.483C4.378,6.479,4.369,6.476,4.36,6.471L0.145,4.43C0.04,4.379-0.018,4.264,0.005,4.149
+	c0.022-0.115,0.119-0.201,0.235-0.21l6.331-0.464C6.605,3.472,6.64,3.477,6.672,3.488c0.01,0.003,0.02,0.007,0.029,0.012
+	l3.477,1.684c0.102,0.049,0.159,0.16,0.142,0.272c-0.018,0.113-0.106,0.201-0.218,0.217L4.508,6.494
+	C4.468,6.5,4.427,6.496,4.388,6.483z"></path>
+<path fill="#FECA14" d="M28.948,16.826c-0.014-0.005-0.027-0.011-0.041-0.018l-4.373-2.425c-0.081-0.045-0.131-0.13-0.132-0.223
+	c-0.001-0.093,0.047-0.179,0.127-0.227l4.262-2.538c0.065-0.039,0.144-0.047,0.214-0.023c0.014,0.005,0.027,0.011,0.04,0.018
+	l3.427,1.882c0.072,0.04,0.121,0.112,0.132,0.195c0.01,0.082-0.021,0.165-0.082,0.222l-3.315,3.08
+	C29.135,16.836,29.037,16.856,28.948,16.826z"></path>
+<path fill="#EB5595" d="M21.241,23.987c-0.014-0.005-0.027-0.011-0.041-0.019l-7.602-4.175c-0.082-0.045-0.133-0.132-0.133-0.226
+	s0.051-0.181,0.132-0.228l5.91-3.324c0.064-0.036,0.14-0.043,0.208-0.02c0.014,0.005,0.027,0.011,0.041,0.018l6.137,3.371
+	c0.072,0.04,0.121,0.112,0.131,0.195c0.011,0.082-0.02,0.164-0.081,0.221l-4.445,4.13C21.428,23.997,21.329,24.016,21.241,23.987z"></path>
+<path fill="#85D0F5" d="M46.108,0.893L26.227,6.197c-0.102,0.027-0.177,0.114-0.19,0.219c-0.013,0.105,0.039,0.207,0.131,0.258
+	l8.446,4.658c0.014,0.007,0.027,0.013,0.041,0.018c0.088,0.03,0.188,0.01,0.258-0.055L46.108,0.893z"></path>
+<path fill="#85D0F5" d="M43.767,0.597L15,0.259c-0.121-0.001-0.226,0.082-0.254,0.2c-0.028,0.118,0.029,0.239,0.137,0.292
+	l6.409,3.103c0.009,0.005,0.019,0.008,0.029,0.012c0.039,0.013,0.08,0.017,0.12,0.011L43.767,0.597z"></path>
+<path fill="#14263D" d="M21.5,15.187c-0.03-0.011-0.059-0.026-0.084-0.049c-0.086-0.074-0.113-0.197-0.066-0.302l3.571-7.94
+	c0.029-0.066,0.085-0.116,0.153-0.139c0.054-0.019,0.111-0.018,0.164,0c0.014,0.005,0.027,0.011,0.041,0.018l4.629,2.561
+	c0.079,0.043,0.13,0.125,0.133,0.216S30,9.729,29.924,9.779l-8.201,5.379C21.656,15.203,21.573,15.211,21.5,15.187z"></path>
+<path fill="#016172" d="M21.043,13.698c-0.109-0.038-0.181-0.146-0.172-0.264l0.675-8.847c0.009-0.121,0.101-0.22,0.22-0.237
+	l16.431-2.413c0.041-0.006,0.082-0.002,0.119,0.01c0.084,0.029,0.15,0.1,0.169,0.193c0.026,0.134-0.056,0.267-0.188,0.302
+	L24.733,6.061l-3.372,7.497c-0.051,0.114-0.177,0.176-0.298,0.146C21.057,13.702,21.05,13.7,21.043,13.698z"></path>
+<path fill="#61B22F" d="M16.167,14.866c-0.014-0.005-0.027-0.011-0.04-0.019l-7.028-3.86c-0.092-0.051-0.144-0.153-0.131-0.258
+	c0.013-0.105,0.089-0.192,0.191-0.219l7.548-1.993c0.049-0.013,0.101-0.011,0.147,0.005c0.014,0.005,0.027,0.011,0.041,0.018
+	l5.464,3.001c0.084,0.046,0.136,0.137,0.133,0.234s-0.06,0.185-0.147,0.227l-5.984,2.852C16.299,14.883,16.23,14.886,16.167,14.866z
+	"></path>
+	
+<filter id="dropshadow" height="130%">
+<feGaussianBlur in="SourceAlpha" stdDeviation="3"></feGaussianBlur> <!-- stdDeviation is how much to blur -->
+<feOffset dx="2" dy="2" result="offsetblur"></feOffset> <!-- how much to offset -->
+<feComponentTransfer>
+<feFuncA type="linear" slope="0.5"></feFuncA> <!-- slope is the opacity of the shadow -->
+</feComponentTransfer>
+<feMerge> 
+<feMergeNode></feMergeNode> <!-- this contains the offset blurred image -->
+<feMergeNode in="SourceGraphic"></feMergeNode> <!-- this contains the element that the filter is applied to -->
+</feMerge>
+</filter>
+		</svg>
+	</a>
+	<button class="navbar-toggler py-1 px-1 border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav mr-auto mt-2 mt-md-0">
+			<li class="d-lg-none nav-item border-bottom border-secondary my-1"></li>
+			
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="nav-item">
+				<a class="btm_about nav-link text-Cherry-blossom  active_menu_1" href="#">
+					<i class="fab fa-chrome "></i>  Web Dev
+				</a>
+			</li>
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="nav-item">
+				<a class="btm_about nav-link text-jordy-blue " href="#">
+					<i class="fab fa-codepen "></i>  Programming
+				</a>
+			</li>
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="nav-item">
+				<a class="btm_about nav-link text-gossip " href="#">
+					<i class="fas fa-database "></i>  Databases
+				</a>
+			</li>
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="nav-item">
+				<a class="btm_about nav-link text-info " href="#">
+					<i class="fas fa-shield-alt "></i>  Security
+				</a>
+			</li>
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="d-lg-none nav-item border-bottom border-secondary my-1"></li>
+			<li class="nav-item">
+				<a class="btm_about nav-link text-cream-can " href="#">
+					<i class="fas fa-om "></i> Yoga
+				</a>
+			</li>
+			<li class="d-lg-none nav-item border-bottom border-secondary my-1"></li>
+			<li class="d-none d-md-inline-block nav-item border border-right border-secondary mx-2"></li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle text-muted d " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-hashtag "></i> Others
+				</a>
+				<div class="dropdown-menu mt-0">
+					<a class="dropdown-item text-dark" href="#">
+						 Game Programming
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Graphics & Design
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Operating Systems
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Networking & Cloud Computing
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Certification
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Computers & Technology
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Hardware & DIY
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Marketing & SEO
+					</a>
+					<a class="dropdown-item text-dark" href="#">
+						 Software
+					</a>
+				</div>
+			</li>
+		</ul>
+			
+	</div>
+</nav>
+	
+<div class=" container mt-3">
+	
+    <div class="row mx-2 mt-4">
+      <div class="colmd-12">
+        <h1 class="display-4 text-shadow">ViDevs</h1>
+        <small>
+          is a free download Ebooks and Sofware for website.
+          It was built on Blogspot System, JQuery and Bootstrap 4.0.
+          All ebooks and software are collected from many resources on Internet.
+        </small>
+      </div>
+    </div>
+     <hr/>
+	<div class="mypost row mt-4  ">
+	
+		<div class="col-lg-2 col-sm-4 article mt-2  mb-2 ">
+			<img class="lazyload thumb mb-2" 
+				data-sizes="auto"
+				data-srcset="https://i.imgur.com/HTtbRD7t.jpg 100w,
+				    https://i.imgur.com/UNsq9ZGm.jpg 300w"
+				  class="lazyload"
+			/>
+			<p class="title"><a class=" text-steel-blue font-weight-bold " href="#">JavaScript Data Structures and Algorithms</a></p>
+		</div>
+		<div class="col-lg-2 col-sm-4 article mt-2 mb-2 ">
+			<img class="thumb mb-2" src="https://i.imgur.com/RBU0pEm.jpg" />
+			<p class="title "><a class="text-steel-blue font-weight-bold " href="#">Phương pháp Yoga Ấn độ chưa biết hay dở ra sao nữa thì có sao đâu hé em yêu</a></p>
+		</div>
+		<div class="col-lg-2 col-sm-4 article mt-2  mb-2 ">
+			<img class="thumb mb-2"  src="https://i.imgur.com/QW8jnnq.jpg" />
+			<p class="title "><a href="#">JavaScript Data Structures and Algorithms</a></p>
+		</div>
+		<div class="col-lg-2 col-sm-4 article mt-2 mb-2 ">
+			<img class="thumb mb-2" src="https://i.imgur.com/RBU0pEm.jpg" />
+			<p class="title "><a href="#">Phương pháp Yoga Ấn độ chưa biết hay dở ra sao nữa thì có sao đâu hé em yêu</a></p>
+		</div>
+		<div class="col-lg-2 col-sm-4 article mt-2  mb-2 ">
+			<img class="thumb mb-2"  src="https://i.imgur.com/QW8jnnq.jpg" />
+			<p class="title "><a href="#">JavaScript Data Structures and Algorithms</a></p>
+		</div>
+		<div class="col-lg-2 col-sm-4 article mt-2 mb-2 ">
+			<img class="thumb mb-2" src="https://i.imgur.com/RBU0pEm.jpg" />
+			<p class="title "><a href="#">Phương pháp Yoga Ấn độ chưa biết hay dở ra sao nữa thì có sao đâu hé em yêu</a></p>
+		</div>
+
+	</div>
+
+		<hr/>
+		<div class="mx-2 row pagination clearfix  mb-2" id="blog-pager"></div>
+	
+	
+	
+ 
+</div>
+
+		<script defer src="https://use.fontawesome.com/releases/v5.7.0/js/all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha256-MSYVjWgrr6UL/9eQfQvOyt6/gsxb6dpwI1zqM5DbLCs=" crossorigin="anonymous"></script>
+			
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.5/lazysizes.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				var noPage = 5;
+				var numPage = 2110;
+				var cur = "";
+				var html = '';
+				if (numPage <= 7){
+					for (var i=1;i<=numPage;i++){
+						cur = (noPage==i)?' class="current"':'';
+						html+='<span'+cur+'>'+i+'</span>';
+					}
+				}
+				else {
+					if (noPage<=3){
+						//thuoc 3 trang dau
+						for (var i=1;i<=3;i++){
+							cur = (noPage==i)?' class="current"':'';
+							html+='<span'+cur+'>'+i+'</span>';
+						}
+						html+='<span data-n="4">>></span><span>'+numPage+'</span>';
+					}
+					else if (numPage-2<=noPage){
+						//thuoc 3 trang cuoi
+						html+='<span>1</span><span><<</span>';
+						for (var i=numPage-2;i<=numPage;i++){
+							cur = (noPage==i)?' class="current"':'';
+							html+='<span'+cur+'>'+i+'</span>';
+						}
+					}
+					else{
+						html+='<span>1</span><span><<</span>';
+						for (var i=noPage-1;i<=noPage+1;i++){
+							cur = (noPage==i)?' class="current"':'';
+							html+='<span'+cur+'>'+i+'</span>';
+						}
+						html+='<span>>></span><span>'+numPage+'</span>';
+					}
+				}
+
+				$(".pagination").html(html);
+				$(".pagination span").unbind().on("click",function(){
+					if(!$(this).hasClass("current")){
+						noPage = $(this).data('n');
+						alert(noPage);
+					}
+				})
+			});
+		</script>
+	</body>
+</html>
